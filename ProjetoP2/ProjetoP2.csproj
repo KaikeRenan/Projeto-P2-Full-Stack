@@ -43,6 +43,13 @@
     <Folder Include="Interface\Controllers\" />
     <Folder Include="Interface\Middlewares\" />
     <Folder Include="Interface\Filters\" />
+    <Folder Include="Appointments\" />
+    <Folder Include="Register\Application\DTOs\" />
+    <Folder Include="Register\Application\UseCases\" />
+    <Folder Include="Register\Domain\IRepositories\" />
+    <Folder Include="Register\Infrastructure\Data\" />
+    <Folder Include="Register\Infrastructure\Repositories\" />
+    <Folder Include="Register\Interface\Controllers\" />
   </ItemGroup>
 
 </Project>

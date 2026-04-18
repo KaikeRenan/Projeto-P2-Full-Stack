@@ -1,6 +1,6 @@
 ﻿namespace ProjetoP2.Domain.Entities
 {
-    public class Veterinarian
+    public class Pet
     {
     }
 }
