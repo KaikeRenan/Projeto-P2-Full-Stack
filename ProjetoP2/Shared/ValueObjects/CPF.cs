@@ -2,12 +2,13 @@
 {
     public class CPF
     {
-        public string Value { get; set; } 
+        public string Value { get; private set; } 
 
         public CPF(string value)
         {
-            if (string.IsNullOrEmpty(value) || value.Length < 11) 
-            { 
+            if (string.IsNullOrEmpty(value) || value.Length < 11)
+            // if (!value.All(char.IsDigit) || value.Length != 11)
+            {
                 throw new ArgumentException("CPF com formato inválido"); 
             }
 

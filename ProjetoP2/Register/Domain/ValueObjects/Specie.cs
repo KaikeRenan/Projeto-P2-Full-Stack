@@ -2,7 +2,7 @@
 {
     public class Specie
     {
-        public string Value { get; set; }
+        public string Value { get; private set; }
 
         public Specie(string value)
         {

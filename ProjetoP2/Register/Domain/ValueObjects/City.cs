@@ -2,13 +2,13 @@
 {
     public class City
     {
-        public string Value { get; set; }
+        public string Value { get; private set; }
 
         public City(string value)
         {
             if (string.IsNullOrEmpty(value))
             {
-                throw new ArgumentException("Cidade com formato inválido");
+                throw new ArgumentException("Nome de cidade com formato inválido");
             }
 
             this.Value = value.Trim();

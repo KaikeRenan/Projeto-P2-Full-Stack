@@ -21,7 +21,7 @@ namespace ProjetoP2.Register.Domain.ValueObjects
             "Outros"
         };
 
-        public string Value { get; } 
+        public string Value { get; private set; } 
 
         public Color (string value)
         {

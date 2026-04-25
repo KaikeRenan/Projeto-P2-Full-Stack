@@ -2,7 +2,7 @@
 {
     public class Sex
     {
-        public string Value { get; set; }
+        public string Value { get; private set;; }
 
         public Sex(string value)
         {
@@ -11,7 +11,7 @@
                 throw new ArgumentException("Sexo inválido");
             }
 
-            if (value != "Macho" || value != "Fêmea")
+            if (value != "Macho" && value != "Fêmea")
             {
                 throw new ArgumentException("Sexo não permitido");
             }

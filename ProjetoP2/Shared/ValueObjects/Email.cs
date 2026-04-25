@@ -2,11 +2,12 @@
 {
     public class Email
     {
-        public string Value { get; set; }
+        public string Value { get; private set; }
 
         public Email(string value)
         {
             if (string.IsNullOrEmpty(value) || !value.Contains("@"))
+            // if (!value.Contains("@") || !value.Contains("."))
             {
                 throw new ArgumentException("Email com formato inválido");
             }
