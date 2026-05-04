@@ -48,11 +48,7 @@
     <Folder Include="Interface\Controllers\" />
     <Folder Include="Interface\Middlewares\" />
     <Folder Include="Interface\Filters\" />
-    <Folder Include="Register\Application\DTOs\" />
-    <Folder Include="Register\Application\UseCases\" />
-    <Folder Include="Register\Domain\IRepositories\" />
-    <Folder Include="Register\Infrastructure\Repositories\" />
-    <Folder Include="Register\Interface\Controllers\" />
+    <Folder Include="Register\Application\UseCases\Pet\" />
   </ItemGroup>
 
 </Project>

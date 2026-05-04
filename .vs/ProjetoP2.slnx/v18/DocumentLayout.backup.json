@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\dev\\Projeto-P2-Full-Stack\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\clinic\\domain\\valueobjects\\crmv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\clinic\\domain\\valueobjects\\crmv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,14 +35,6 @@
       "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\clinic\\infrastructure\\data\\clinicdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\projetop2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\projetop2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -50,11 +50,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Program.cs",
               "RelativeDocumentMoniker": "ProjetoP2\\Program.cs",
@@ -68,7 +68,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "CPF.cs",
               "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Shared\\ValueObjects\\CPF.cs",
               "RelativeDocumentMoniker": "ProjetoP2\\Shared\\ValueObjects\\CPF.cs",
@@ -77,12 +77,11 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-25T20:10:43.678Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "CRMV.cs",
               "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Clinic\\Domain\\ValueObjects\\CRMV.cs",
               "RelativeDocumentMoniker": "ProjetoP2\\Clinic\\Domain\\ValueObjects\\CRMV.cs",
@@ -95,7 +94,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Owner.cs",
               "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Domain\\Entities\\Owner.cs",
               "RelativeDocumentMoniker": "ProjetoP2\\Register\\Domain\\Entities\\Owner.cs",
@@ -103,12 +102,11 @@
               "RelativeToolTip": "ProjetoP2\\Register\\Domain\\Entities\\Owner.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-25T20:08:54.728Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-25T20:08:54.728Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Appointment.cs",
               "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Clinic\\Domain\\Entities\\Appointment.cs",
               "RelativeDocumentMoniker": "ProjetoP2\\Clinic\\Domain\\Entities\\Appointment.cs",
@@ -116,12 +114,11 @@
               "RelativeToolTip": "ProjetoP2\\Clinic\\Domain\\Entities\\Appointment.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-25T20:07:48.14Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-25T20:07:48.14Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Vet.cs",
               "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Clinic\\Domain\\Entities\\Vet.cs",
               "RelativeDocumentMoniker": "ProjetoP2\\Clinic\\Domain\\Entities\\Vet.cs",
@@ -129,12 +126,11 @@
               "RelativeToolTip": "ProjetoP2\\Clinic\\Domain\\Entities\\Vet.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-25T20:07:13.838Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-25T20:07:13.838Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\appsettings.json",
               "RelativeDocumentMoniker": "ProjetoP2\\appsettings.json",
@@ -148,19 +144,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "ProjetoP2",
+              "Title": "ProjetoP2.csproj",
               "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\ProjetoP2.csproj",
               "RelativeDocumentMoniker": "ProjetoP2\\ProjetoP2.csproj",
               "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\ProjetoP2.csproj",
               "RelativeToolTip": "ProjetoP2\\ProjetoP2.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-04-25T19:24:14.86Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-25T19:24:14.86Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "ClinicDBContext.cs",
               "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Clinic\\Infrastructure\\Data\\ClinicDBContext.cs",
               "RelativeDocumentMoniker": "ProjetoP2\\Clinic\\Infrastructure\\Data\\ClinicDBContext.cs",
@@ -168,8 +163,7 @@
               "RelativeToolTip": "ProjetoP2\\Clinic\\Infrastructure\\Data\\ClinicDBContext.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-25T19:22:14.083Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-25T19:22:14.083Z"
             },
             {
               "$type": "Document",
@@ -181,8 +175,7 @@
               "RelativeToolTip": "ProjetoP2\\Register\\Infrastructure\\Data\\RegisterDBContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-25T19:20:41.416Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-25T19:20:41.416Z"
             }
           ]
         }

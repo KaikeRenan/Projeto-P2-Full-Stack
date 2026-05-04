@@ -1,6 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using ProjetoP2.Clinic.Infrastructure.Data;
+using ProjetoP2.Register.Application.UseCases.OwnerUseCases;
+using ProjetoP2.Register.Domain.IRepositories;
 using ProjetoP2.Register.Infrastructure.Data;
+using ProjetoP2.Register.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +12,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+builder.Services.AddScoped<IOwnerRepository, OwnerRepository>();
+
+builder.Services.AddScoped<CreateOwnerUseCase>();
+builder.Services.AddScoped<GetOwnerUseCase>();
+builder.Services.AddScoped<DeleteOwnerUseCase>();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
