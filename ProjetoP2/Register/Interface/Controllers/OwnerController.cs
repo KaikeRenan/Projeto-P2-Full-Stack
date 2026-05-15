@@ -27,7 +27,7 @@ namespace ProjetoP2.Register.Interface.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get(int Id)
+        public IActionResult Get(Guid Id)
         {
             return Ok(_getUseCase.Run());
         }

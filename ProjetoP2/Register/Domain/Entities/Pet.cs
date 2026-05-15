@@ -6,48 +6,70 @@ namespace ProjetoP2.Register.Domain.Entities
 {
     public class Pet : BaseEntity
     {
-        public string Name { get; set; }
+        public string Name { get; private set; }
 
-        public PetRG? PetRG { get; set; }
+        public PetRG? PetRG { get; private set; }
 
-        public Color? Color { get; set; }
-        public Specie Specie { get; set; }
-        public Sex Sex { get; set; }
-        public bool Castrated { get; set; }
-        public bool? Community { get; set; }
+        public Color Color { get; private set; }
+        public Specie Specie { get; private set; }
+        public Sex Sex { get; private set; }
+        public bool Castrated { get; private set; }
+        public bool Community { get; private set; }
 
-        // Alterar 
-        public bool? Microchipped { get; set; }
-        public int? MicrochippedNumber { get; set; }
+        public bool Microchipped { get; private set; }
+        public int? MicrochippedNumber { get; private set; }
+        public DateTime BirthDate { get; private set; }
+        public State? State { get; private set; }
+        public City? City { get; private set; }
 
-        public DateTime BirthDate { get; set; }
+        public string? PhotoURL { get; private set; }
 
-        // Naturalidade
-        public State State { get; set; }
-        public City City { get; set; }
+        public Guid? OwnerId { get; private set; }
+        public Owner? Owner { get; private set; }
 
-        public string? PhotoURL { get; set; }
-
-        public Guid OwnerId { get; private set; }
-        public Owner Owner { get; private set; }
-
-        public Pet(string name, PetRG petRG, Color color, Specie specie, Sex sex, bool castrated, bool community, bool microchipped, int microchippedNumber, DateTime birthDate, State state, City city, string photoURL, Guid ownerId, Owner owner)
+        public Pet(
+            string name,
+            Color color,
+            Specie specie, 
+            Sex sex, 
+            bool castrated, 
+            bool community,
+            bool microchipped,
+            DateTime birthDate,
+            PetRG? petRG = null,
+            int? microchippedNumber = null,
+            State? state = null,
+            City? city = null,
+            string? photoURL = null,
+            Guid? ownerId = null
+            )
         {
+            if (string.IsNullOrEmpty(name))
+                throw new ArgumentException("Nome do pet é obrigatório");
+
+            if (microchipped && microchippedNumber == null)
+                throw new ArgumentException("Número do microship é obrigatório");
+
+            if (!microchipped)
+                microchippedNumber = null;
+
+            if (petRG != null && ownerId == null)
+                throw new ArgumentException("Pets com RG devem possuir Dono");
+
             this.Name = name;
-            this.PetRG = petRG;
             this.Color = color;
             this.Specie = specie;
             this.Sex = sex;
             this.Castrated = castrated;
             this.Community = community;
             this.Microchipped = microchipped;
-            this.MicrochippedNumber = microchippedNumber;
             this.BirthDate = birthDate;
+            this.PetRG = petRG;
+            this.MicrochippedNumber = microchippedNumber;
             this.State = state;
             this.City = city;
             this.PhotoURL = photoURL;
             this.OwnerId = ownerId;
-            this.Owner = owner;
         }
     }
 }

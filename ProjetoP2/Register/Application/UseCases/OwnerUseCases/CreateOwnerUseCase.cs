@@ -1,7 +1,6 @@
 ﻿using ProjetoP2.Register.Application.DTOs.Owner;
 using ProjetoP2.Register.Domain.Entities;
 using ProjetoP2.Register.Domain.IRepositories;
-using ProjetoP2.Register.Infrastructure.Repositories;
 using ProjetoP2.Shared.ValueObjects;
 
 namespace ProjetoP2.Register.Application.UseCases.OwnerUseCases
