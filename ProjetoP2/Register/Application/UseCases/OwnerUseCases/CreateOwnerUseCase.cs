@@ -16,7 +16,7 @@ namespace ProjetoP2.Register.Application.UseCases.OwnerUseCases
 
         public ResponseOwnerDto Run(CreateOwnerDto dto)
         {
-            var owner = new Owner(
+            var owner = new OwnerRegister(
                 dto.FirstName, 
                 dto.LastName,
                 new Email(dto.Email),

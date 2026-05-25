@@ -29,8 +29,6 @@
     <Folder Include="Application\Services\" />
     <Folder Include="Clinic\Application\DTOs\" />
     <Folder Include="Clinic\Application\UseCases\" />
-    <Folder Include="Clinic\Domain\IRepositories\" />
-    <Folder Include="Clinic\Infrastructure\Repositories\" />
     <Folder Include="Clinic\Interface\Controllers\" />
     <Folder Include="Domain\DomainEvents\" />
     <Folder Include="Domain\IRepositories\" />
@@ -38,7 +36,6 @@
     <Folder Include="Infrastructure\CrossCutting\IoC\" />
     <Folder Include="Infrastructure\CrossCutting\Logging\" />
     <Folder Include="Infrastructure\CrossCutting\Exceptions\" />
-    <Folder Include="Infrastructure\Data\" />
     <Folder Include="Infrastructure\Auth\" />
     <Folder Include="Infrastructure\Messaging\Consumers\" />
     <Folder Include="Infrastructure\Messaging\Events\" />

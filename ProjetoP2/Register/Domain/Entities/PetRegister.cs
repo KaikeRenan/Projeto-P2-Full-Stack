@@ -4,7 +4,7 @@ using ProjetoP2.Shared.ValueObjects;
 
 namespace ProjetoP2.Register.Domain.Entities
 {
-    public class Pet : BaseEntity
+    public class PetRegister : BaseEntity
     {
         public string Name { get; private set; }
 
@@ -25,9 +25,9 @@ namespace ProjetoP2.Register.Domain.Entities
         public string? PhotoURL { get; private set; }
 
         public Guid? OwnerId { get; private set; }
-        public Owner? Owner { get; private set; }
+        public OwnerRegister? Owner { get; private set; }
 
-        public Pet(
+        public PetRegister(
             string name,
             Color color,
             Specie specie, 

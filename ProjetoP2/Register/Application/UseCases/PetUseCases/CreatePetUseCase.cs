@@ -19,7 +19,7 @@ namespace ProjetoP2.Register.Application.UseCases.PetUseCases
 
         public ResponsePetDto Run(CreatePetDto dto)
         {
-            Owner? owner = null;
+            OwnerRegister? owner = null;
 
             if (dto.OwnerId.HasValue)
             {
@@ -29,7 +29,7 @@ namespace ProjetoP2.Register.Application.UseCases.PetUseCases
                     throw new Exception("Dono não foi encontrado");
             }
 
-            var pet = new Pet(
+            var pet = new PetRegister(
                 dto.Name,
                 new Color(dto.Color),
                 new Specie(dto.Specie),

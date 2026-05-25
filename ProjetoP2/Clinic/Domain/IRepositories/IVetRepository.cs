@@ -3,7 +3,7 @@ using ProjetoP2.Shared.IRepositories;
 
 namespace ProjetoP2.Clinic.Domain.IRepositories
 {
-    public interface IAppointmentRepository : IBaseRepository<AppointmentClinic>
+    public interface IVetRepository : IBaseRepository<VetClinic>
     {
     }
 }

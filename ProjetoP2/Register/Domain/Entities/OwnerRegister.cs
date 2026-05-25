@@ -3,7 +3,7 @@ using ProjetoP2.Shared.ValueObjects;
 
 namespace ProjetoP2.Register.Domain.Entities
 {
-    public class Owner : BaseEntity
+    public class OwnerRegister : BaseEntity
     {
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
@@ -11,9 +11,9 @@ namespace ProjetoP2.Register.Domain.Entities
         public PhoneNumber PhoneNumber { get; private set; }
         public CPF CPF { get; private set; }
 
-        public ICollection<Pet> Pets { get; private set; } = new List<Pet>();
+        public ICollection<PetRegister> Pets { get; private set; } = new List<PetRegister>();
 
-        public Owner(string firstName, string lastName, Email email, PhoneNumber phoneNumber, CPF cpf)
+        public OwnerRegister(string firstName, string lastName, Email email, PhoneNumber phoneNumber, CPF cpf)
         {
             this.FirstName = firstName;
             this.LastName = lastName;
@@ -22,6 +22,6 @@ namespace ProjetoP2.Register.Domain.Entities
             this.CPF = cpf;
         }
 
-        public void AddPet(Pet pet) { Pets.Add(pet); }
+        public void AddPet(PetRegister pet) { Pets.Add(pet); }
     }
 }

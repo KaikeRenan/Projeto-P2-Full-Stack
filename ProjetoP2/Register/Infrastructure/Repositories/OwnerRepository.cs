@@ -4,7 +4,7 @@ using ProjetoP2.Shared.Repositories;
 
 namespace ProjetoP2.Register.Infrastructure.Repositories
 {
-    public class OwnerRepository : BaseRepository<Owner>, IOwnerRepository
+    public class OwnerRepository : BaseRepository<OwnerRegister>, IOwnerRepository
     {
         public OwnerRepository(Context context) : base(context) { }
     }

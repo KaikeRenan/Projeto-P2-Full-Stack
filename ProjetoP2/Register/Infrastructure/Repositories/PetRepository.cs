@@ -4,7 +4,7 @@ using ProjetoP2.Shared.Repositories;
 
 namespace ProjetoP2.Register.Infrastructure.Repositories
 {
-    public class PetRepository : BaseRepository<Pet>, IPetRepository
+    public class PetRepository : BaseRepository<PetRegister>, IPetRepository
     {
         public PetRepository(Context context) : base(context) { }
     }

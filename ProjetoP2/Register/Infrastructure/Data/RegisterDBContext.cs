@@ -5,8 +5,8 @@ namespace ProjetoP2.Register.Infrastructure.Data
 {
     public class RegisterDBContext : DbContext
     {
-        public DbSet<Owner> Owners => Set<Owner>();
-        public DbSet<Pet> Pets => Set<Pet>();
+        public DbSet<OwnerRegister> Owners => Set<OwnerRegister>();
+        public DbSet<PetRegister> Pets => Set<PetRegister>();
 
         public RegisterDBContext(DbContextOptions<RegisterDBContext> options)
             : base(options) { }
@@ -15,14 +15,14 @@ namespace ProjetoP2.Register.Infrastructure.Data
         {
             modelBuilder.HasDefaultSchema("register");
 
-            modelBuilder.Entity<Owner>()
+            modelBuilder.Entity<OwnerRegister>()
                 .HasMany(o => o.Pets)
                 .WithOne(p => p.Owner)
                 .HasForeignKey(p => p.OwnerId);
 
-            modelBuilder.Entity<Owner>().OwnsOne(o => o.Email);
-            modelBuilder.Entity<Owner>().OwnsOne(o => o.PhoneNumber);
-            modelBuilder.Entity<Owner>().OwnsOne(o => o.CPF);
+            modelBuilder.Entity<OwnerRegister>().OwnsOne(o => o.Email);
+            modelBuilder.Entity<OwnerRegister>().OwnsOne(o => o.PhoneNumber);
+            modelBuilder.Entity<OwnerRegister>().OwnsOne(o => o.CPF);
         }
     }
 }

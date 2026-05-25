@@ -4,7 +4,7 @@ using ProjetoP2.Shared.ValueObjects;
 
 namespace ProjetoP2.Clinic.Domain.Entities
 {
-    public class Vet : BaseEntity
+    public class VetClinic : BaseEntity
     {
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
@@ -14,9 +14,9 @@ namespace ProjetoP2.Clinic.Domain.Entities
 
         public CRMV CRMV { get; private set; }
 
-        public ICollection<Appointment> Appointments { get; private set; } = new List<Appointment>();
+        public ICollection<AppointmentClinic> Appointments { get; private set; } = new List<AppointmentClinic>();
 
-        public Vet(string firstName, string lastName, Email email, PhoneNumber phoneNumber, CPF cpf, CRMV crmv)
+        public VetClinic(string firstName, string lastName, Email email, PhoneNumber phoneNumber, CPF cpf, CRMV crmv)
         {
             this.FirstName = firstName;
             this.LastName = lastName;
@@ -26,6 +26,6 @@ namespace ProjetoP2.Clinic.Domain.Entities
             this.CRMV = crmv;
         }
 
-        public void AddPet(Appointment pet) { Appointments.Add(pet); }
+        public void AddPet(AppointmentClinic pet) { Appointments.Add(pet); }
     }
 }

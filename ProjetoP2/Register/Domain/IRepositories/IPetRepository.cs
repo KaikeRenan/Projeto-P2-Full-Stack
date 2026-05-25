@@ -3,7 +3,7 @@ using ProjetoP2.Shared.IRepositories;
 
 namespace ProjetoP2.Register.Domain.IRepositories
 {
-    public interface IPetRepository : IBaseRepository<Pet>
+    public interface IPetRepository : IBaseRepository<PetRegister>
     {
     }
 }
