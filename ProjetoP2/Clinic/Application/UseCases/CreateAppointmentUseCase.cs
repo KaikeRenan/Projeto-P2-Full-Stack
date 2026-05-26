@@ -17,7 +17,7 @@ namespace ProjetoP2.Clinic.Application.UseCases.CreateAppointmentUseCase
 
         public ResponseAppointmentDto Run(CreateAppointmentDto dto)
         {
-            var appointment = new Appointment(
+            var appointment = new AppointmentClinic(
                 dto.VetId,
                 dto.PetId,
                 dto.DateAppointment
