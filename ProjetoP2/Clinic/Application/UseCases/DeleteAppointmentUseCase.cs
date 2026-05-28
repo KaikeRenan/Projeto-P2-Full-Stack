@@ -1,24 +1,26 @@
-﻿using ProjetoP2.Register.Domain.IRepositories;
+﻿
+using ProjetoP2.Clinic.Domain.IRepositories;
 
-namespace ProjetoP2.Register.Application.UseCases.OwnerUseCases
+
+namespace ProjetoP2.Clinic.Application.UseCases.DeleteAppointmentUseCase
 {
-    public class DeleteOwnerUseCase
+    public class DeleteAppointmentUseCase
     {
-        private readonly IOwnerRepository _owerRepository;
+        private readonly IAppointmentRepository _AppointmentRepository;
 
-        public DeleteOwnerUseCase(IOwnerRepository owerRepository)
+        public DeleteAppointmentUseCase(IAppointmentRepository AppointmentRepository)
         {
-            _owerRepository = owerRepository;
+            _AppointmentRepository = AppointmentRepository;
         }
 
         public void Run(Guid Id) 
         {
-            var owner = _owerRepository.GetById(Id);
+            var owner = _AppointmentRepository.GetById(Id);
 
             if (owner == null)
                 throw new Exception("Dono não foi encontrado");
 
-            _owerRepository.Delete(owner);
+            _AppointmentRepository.Delete(owner);
         }
     }
 }

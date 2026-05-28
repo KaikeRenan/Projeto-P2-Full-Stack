@@ -5,16 +5,16 @@ namespace ProjetoP2.Register.Application.UseCases.OwnerUseCases
 {
     public class GetOwnerUseCase
     {
-        private readonly IOwnerRepository _owerRepository;
+        private readonly IOwnerRepository _ownerRepository;
 
         public GetOwnerUseCase(IOwnerRepository owerRepository)
         {
-            _owerRepository = owerRepository;
+            _ownerRepository = owerRepository;
         }
 
         public List<ResponseOwnerDto> Run()
         {
-            return _owerRepository.GetAll().Select(owner => new ResponseOwnerDto
+            return _ownerRepository.GetAll().Select(owner => new ResponseOwnerDto
             {
                 Id = owner.Id,
                 FirstName = owner.FirstName,

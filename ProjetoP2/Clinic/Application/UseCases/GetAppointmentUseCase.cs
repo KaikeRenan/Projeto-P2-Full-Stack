@@ -1,25 +1,26 @@
-﻿using ProjetoP2.Register.Application.DTOs.Owner;
-using ProjetoP2.Register.Domain.IRepositories;
+﻿using ProjetoP2.Clinic.Application.DTOs.Appointment;
+using ProjetoP2.Clinic.Domain.IRepositories;
+using ProjetoP2.Infrastructure.Data;
 
-namespace ProjetoP2.Register.Application.UseCases.OwnerUseCases
+namespace ProjetoP2.Clinic.Application.UseCases.GetAppointmentUseCase
 {
-    public class GetOwnerUseCase
+    public class GetAppointmentUseCase
     {
-        private readonly IOwnerRepository _owerRepository;
+        private readonly IAppointmentRepository _AppointmentRepository;
 
-        public GetOwnerUseCase(IOwnerRepository owerRepository)
+        public GetAppointmentUseCase(IAppointmentRepository AppointmentRepository)
         {
-            _owerRepository = owerRepository;
+            _AppointmentRepository = AppointmentRepository;
         }
 
         public List<ResponseAppointmentDto> Run()
         {
-            return _owerRepository.GetAll().Select(owner => new ResponseAppointmentDto
+            return _AppointmentRepository.GetAll().Select(appointment => new ResponseAppointmentDto
             {
-                Id = owner.Id,
-                FirstName = owner.FirstName,
-                LastName = owner.LastName,
-                Email = owner.Email.Value,
+                Id = appointment.Id,
+                VetId = appointment.VetId,
+                PetId = appointment.PetId,
+                DateAppointment = appointment.DateAppointment
             }).ToList();
         }
     }

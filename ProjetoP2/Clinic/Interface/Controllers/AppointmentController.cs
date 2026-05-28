@@ -32,7 +32,7 @@ namespace ProjetoP2.Register.Interface.Controllers
         [HttpGet]
         public IActionResult Get(Guid Id)
         {
-            return Ok(_getUseCase.Run(Id));
+            return Ok(_getUseCase.Run());
         }
 
         [HttpDelete("{Id}")]

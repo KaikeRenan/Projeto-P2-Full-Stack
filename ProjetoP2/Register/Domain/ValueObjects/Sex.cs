@@ -2,7 +2,7 @@
 {
     public class Sex
     {
-        public string Value { get; private set;; }
+        public string Value { get; private set; }
 
         public Sex(string value)
         {
