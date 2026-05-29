@@ -15,29 +15,29 @@ namespace ProjetoP2.Shared.Repositories
             _dbSet = context.Set<T>();
         }
 
-        public void Create(T entity)
+        virtual public void Create(T entity)
         {
             _dbSet.Add(entity);
             _context.SaveChanges();
         }
 
-        public T? GetById(Guid Id)
+        virtual public T? GetById(Guid Id)
         {
             return _dbSet.FirstOrDefault(entity => entity.Id == Id && entity.RemovedAt == null);
         }
 
-        public List<T> GetAll()
+        virtual public List<T> GetAll()
         {
             return _dbSet.Where(entity => entity.RemovedAt == null).ToList();
         }
 
-        public void Update(T entity)
+        virtual public void Update(T entity)
         {
             _dbSet.Update(entity);
             _context.SaveChanges();
         }
 
-        public void Delete(T entity)
+        virtual public void Delete(T entity)
         {
             entity.RemovedAt = DateTime.UtcNow;
             _dbSet.Update(entity);

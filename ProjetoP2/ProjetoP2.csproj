@@ -29,6 +29,7 @@
     <Folder Include="Application\Services\" />
     <Folder Include="Clinic\Application\DTOs\" />
     <Folder Include="Clinic\Application\UseCases\" />
+    <Folder Include="Clinic\Infrastructure\Data\" />
     <Folder Include="Clinic\Interface\Controllers\" />
     <Folder Include="Domain\DomainEvents\" />
     <Folder Include="Domain\IRepositories\" />

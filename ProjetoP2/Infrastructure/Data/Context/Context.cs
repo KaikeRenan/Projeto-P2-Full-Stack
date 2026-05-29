@@ -1,21 +1,24 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ProjetoP2.Clinic.Domain.Entities;
 using ProjetoP2.Register.Domain.Entities;
 
-namespace ProjetoP2.Register.Infrastructure.Data
+namespace ProjetoP2.Infrastructure.Data.Context
 {
-    public class RegisterDBContext : DbContext
+    public class Context:DbContext
     {
-        
+
         public DbSet<OwnerRegister> OwnerRegisters { get; set; } = null!;
         public DbSet<PetRegister> PetRegisters { get; set; } = null!;
         public DbSet<AppointmentRegister> AppointmentRegisters { get; set; } = null!;
+        public DbSet<VetClinic> VetClinics { get; set; } = null!;
+        public DbSet<AppointmentClinic> AppointmentClinics { get; set; } = null!;
 
-        public RegisterDBContext(DbContextOptions<RegisterDBContext> options) : base(options) { }
+        public Context(DbContextOptions<Context> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            
+
             modelBuilder.Entity<OwnerRegister>(owner =>
             {
                 owner.ToTable("OwnerRegisters");
@@ -60,14 +63,14 @@ namespace ProjetoP2.Register.Infrastructure.Data
 
                 owner.HasQueryFilter(o => o.RemovedAt == null);
 
-                // ── Relacionamento 1:N → PetRegister ──────────────────────────
+                // ── Relacionamento 1:N → PetRegister 
                 owner.HasMany(o => o.Pets)
                      .WithOne(p => p.Owner)
                      .HasForeignKey(p => p.OwnerId)
                      .OnDelete(DeleteBehavior.Restrict);
             });
 
-            // ── PetRegister ──────────────────────────────────────────────────────
+            // ── PetRegister 
             modelBuilder.Entity<PetRegister>(pet =>
             {
                 pet.ToTable("PetRegisters");
@@ -108,7 +111,7 @@ namespace ProjetoP2.Register.Infrastructure.Data
 
                 pet.Property(p => p.PhotoURL).HasMaxLength(2048);
 
-                pet.Property(p => p.OwnerId); 
+                pet.Property(p => p.OwnerId);
 
                 // State e City (nullable Value Objects)
                 pet.OwnsOne(p => p.State, state =>
@@ -136,7 +139,7 @@ namespace ProjetoP2.Register.Infrastructure.Data
                 pet.HasQueryFilter(p => p.RemovedAt == null);
             });
 
-            // ── AppointmentRegister ──────────────────────────────────────────────
+            // ── AppointmentRegister 
             modelBuilder.Entity<AppointmentRegister>(appt =>
             {
                 appt.ToTable("AppointmentRegisters");
@@ -145,11 +148,86 @@ namespace ProjetoP2.Register.Infrastructure.Data
                 appt.Property(a => a.PetId).IsRequired();
                 appt.Property(a => a.DateAppointment).IsRequired();
 
-                appt.Property(a => a.Notes).HasMaxLength(1000);
+
+                appt.HasQueryFilter(a => a.RemovedAt == null);
+            });
+            modelBuilder.Entity<VetClinic>(vet =>
+            {
+                vet.ToTable("VetClinics");
+                vet.HasKey(v => v.Id);
+
+                vet.Property(v => v.FirstName)
+                   .IsRequired()
+                   .HasMaxLength(100);
+
+                vet.Property(v => v.LastName)
+                   .IsRequired()
+                   .HasMaxLength(100);
+
+
+                vet.OwnsOne(v => v.Email, email =>
+                {
+                    email.Property(e => e.Value)
+                         .HasColumnName("Email")
+                         .IsRequired()
+                         .HasMaxLength(254);
+                    email.HasIndex(e => e.Value).IsUnique();
+                });
+
+
+                vet.OwnsOne(v => v.PhoneNumber, phone =>
+                {
+                    phone.Property(p => p.Value)
+                         .HasColumnName("PhoneNumber")
+                         .IsRequired()
+                         .HasMaxLength(20);
+                });
+
+
+                vet.OwnsOne(v => v.CPF, cpf =>
+                {
+                    cpf.Property(c => c.Value)
+                       .HasColumnName("CPF")
+                       .IsRequired()
+                       .HasMaxLength(11);
+                    cpf.HasIndex(c => c.Value).IsUnique();
+                });
+
+                vet.OwnsOne(v => v.CRMV, crmv =>
+                {
+                    crmv.Property(c => c.Value)
+                        .HasColumnName("CRMV")
+                        .IsRequired()
+                        .HasMaxLength(20);
+                    crmv.HasIndex(c => c.Value).IsUnique();
+                });
+
+
+                vet.HasQueryFilter(v => v.RemovedAt == null);
+
+                vet.HasMany(v => v.Appointments)
+                   .WithOne(a => a.Vet)
+                   .HasForeignKey(a => a.VetId)
+                   .OnDelete(DeleteBehavior.Restrict);
+            });
+
+
+            modelBuilder.Entity<AppointmentClinic>(appt =>
+            {
+                appt.ToTable("AppointmentClinics");
+                appt.HasKey(a => a.Id);
+
+                appt.Property(a => a.VetId).IsRequired();
+                appt.Property(a => a.PetId).IsRequired();
+
+                appt.Property(a => a.DateAppointment)
+                    .IsRequired();
+
+                appt.Property(a => a.Notes)
+                    .HasMaxLength(1000);
 
                 appt.HasQueryFilter(a => a.RemovedAt == null);
             });
         }
     }
 }
-
