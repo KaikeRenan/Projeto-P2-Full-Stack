@@ -7,7 +7,7 @@ using ProjetoP2.Shared.Repositories;
 
 namespace ProjetoP2.Register.Infrastructure.Repositories
 {
-    public class RegisterAppointmentRepository : BaseRepository<AppointmentRegister>, IAppointmentRepository
+    public class RegisterAppointmentRepository : BaseRepository<AppointmentRegister>, IAppointmentRegisterRepository
     {
         private readonly DbSet<Appointment> _appointments;
 
@@ -25,18 +25,50 @@ namespace ProjetoP2.Register.Infrastructure.Repositories
 
         public override AppointmentRegister? GetById(Guid id)
         {
-            return _appointments
-                .Where(a => a.Id == id && a.RemovedAt == null)
-                .Select(a => new AppointmentRegister(a.VetId, a.PetId, a.DateAppointment))
-                .FirstOrDefault();
+            var appointment = _appointments
+                .FirstOrDefault(a => a.Id == id && a.RemovedAt == null);
+
+            if (appointment == null) return null;
+
+            return MapToDomain(appointment);
         }
 
         public override List<AppointmentRegister> GetAll()
         {
             return _appointments
                 .Where(a => a.RemovedAt == null)
-                .Select(a => new AppointmentRegister(a.VetId, a.PetId, a.DateAppointment))
+                .Select(a => MapToDomain(a))
                 .ToList();
+        }
+
+        public override void Update(AppointmentRegister entity)
+        {
+            var appointment = _appointments
+                .FirstOrDefault(a => a.Id == entity.Id && a.RemovedAt == null);
+
+            if (appointment == null) return;
+
+            appointment.Reschedule(entity.DateAppointment);
+
+            _appointments.Update(appointment);
+            _context.SaveChanges();
+        }
+
+        public override void Delete(AppointmentRegister entity)
+        {
+            var appointment = _appointments
+                .FirstOrDefault(a => a.Id == entity.Id && a.RemovedAt == null);
+
+            if (appointment == null) return;
+
+            appointment.RemovedAt = DateTime.UtcNow;
+            _appointments.Update(appointment);
+            _context.SaveChanges();
+        }
+
+        private static AppointmentRegister MapToDomain(Appointment a)
+        {
+            return new AppointmentRegister(a.VetId, a.PetId, a.DateAppointment);
         }
     }
 }

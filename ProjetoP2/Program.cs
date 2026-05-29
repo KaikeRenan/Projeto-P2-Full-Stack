@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
-using ProjetoP2.Clinic.Infrastructure.Data;
+using ProjetoP2.Infrastructure.Data.Context;
 using ProjetoP2.Register.Application.UseCases.OwnerUseCases;
 using ProjetoP2.Register.Application.UseCases.PetUseCases;
 using ProjetoP2.Register.Domain.IRepositories;
-using ProjetoP2.Register.Infrastructure.Data;
+
 using ProjetoP2.Register.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -27,11 +27,8 @@ builder.Services.AddScoped<DeletePetUseCase>();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
-builder.Services.AddDbContext<RegisterDBContext>(options =>
-    options.UseNpgsql(connectionString));
-
-builder.Services.AddDbContext<ClinicDBContext>(options =>
-    options.UseNpgsql(connectionString));
+builder.Services.AddDbContext<Context>(options =>
+    options.UseSqlServer(connectionString));
 
 var app = builder.Build();
 

@@ -3,7 +3,7 @@ using ProjetoP2.Shared.IRepositories;
 
 namespace ProjetoP2.Register.Domain.IRepositories
 {
-    public interface IAppointmentRepository : IBaseRepository<AppointmentRegister>
+    public interface IAppointmentRegisterRepository : IBaseRepository<AppointmentRegister>
     {
     }
 }
