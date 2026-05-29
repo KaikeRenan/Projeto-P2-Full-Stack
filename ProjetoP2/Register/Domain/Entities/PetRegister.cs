@@ -26,7 +26,7 @@ namespace ProjetoP2.Register.Domain.Entities
 
         public Guid? OwnerId { get; private set; }
         public OwnerRegister? Owner { get; private set; }
-
+        protected PetRegister() { }
         public PetRegister(
             string name,
             Color color,

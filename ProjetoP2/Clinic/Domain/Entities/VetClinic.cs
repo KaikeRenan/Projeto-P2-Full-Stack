@@ -16,6 +16,8 @@ namespace ProjetoP2.Clinic.Domain.Entities
 
         public ICollection<AppointmentClinic> Appointments { get; private set; } = new List<AppointmentClinic>();
 
+        protected VetClinic() { }
+
         public VetClinic(string firstName, string lastName, Email email, PhoneNumber phoneNumber, CPF cpf, CRMV crmv)
         {
             this.FirstName = firstName;

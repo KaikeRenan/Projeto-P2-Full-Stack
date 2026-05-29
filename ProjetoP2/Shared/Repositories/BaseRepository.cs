@@ -6,10 +6,10 @@ namespace ProjetoP2.Shared.Repositories
 {
     public class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
     {
-        public readonly Context _context;
+        public readonly DbContext _context;
         public readonly DbSet<T> _dbSet;
 
-        public BaseRepository(Context context)
+        public BaseRepository(DbContext context)
         {
             _context = context;
             _dbSet = context.Set<T>();

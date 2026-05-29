@@ -1,11 +1,12 @@
 ﻿using ProjetoP2.Clinic.Domain.Entities;
 using ProjetoP2.Clinic.Domain.IRepositories;
+using ProjetoP2.Clinic.Infrastructure.Data;
 using ProjetoP2.Shared.Repositories;
 
 namespace ProjetoP2.Clinic.Infrastructure.Repositories
 {
     public class VetRepository : BaseRepository<VetClinic>, IVetRepository
     {
-        public VetRepository(Context context) : base(context) { }
+        public VetRepository(ClinicDBContext context) : base(context) { }
     }
 }

@@ -13,6 +13,7 @@ namespace ProjetoP2.Register.Domain.Entities
 
         public ICollection<PetRegister> Pets { get; private set; } = new List<PetRegister>();
 
+        protected OwnerRegister() { }
         public OwnerRegister(string firstName, string lastName, Email email, PhoneNumber phoneNumber, CPF cpf)
         {
             this.FirstName = firstName;

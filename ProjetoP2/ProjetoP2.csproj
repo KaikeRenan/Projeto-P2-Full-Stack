@@ -45,6 +45,7 @@
     <Folder Include="Interface\Controllers\" />
     <Folder Include="Interface\Middlewares\" />
     <Folder Include="Interface\Filters\" />
+    <Folder Include="Shared\Data\" />
   </ItemGroup>
 
 </Project>
