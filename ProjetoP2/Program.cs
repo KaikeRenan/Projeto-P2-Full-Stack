@@ -9,16 +9,16 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.AddScoped<IOwnerRepository, OwnerRepository>();
-builder.Services.AddScoped<IPetRepository, PetRepository>();
+builder.Services.AddScoped<IOwnerRegisterRepository, OwnerRegisterRepository>();
+builder.Services.AddScoped<IPetRegisterRepository, PetRegisterRepository>();
 
-builder.Services.AddScoped<CreateOwnerUseCase>();
-builder.Services.AddScoped<GetOwnerUseCase>();
-builder.Services.AddScoped<DeleteOwnerUseCase>();
+builder.Services.AddScoped<CreateOwnerRegisterUseCase>();
+builder.Services.AddScoped<GetOwnerRegisterUseCase>();
+builder.Services.AddScoped<DeleteOwnerRegisterUseCase>();
 
-builder.Services.AddScoped<CreatePetUseCase>();
-builder.Services.AddScoped<GetPetUseCase>();
-builder.Services.AddScoped<DeletePetUseCase>();
+builder.Services.AddScoped<CreatePetRegisterUseCase>();
+builder.Services.AddScoped<GetPetRegisterUseCase>();
+builder.Services.AddScoped<DeletePetRegisterUseCase>();
 
 builder.Services.AddDbContext<Context>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
