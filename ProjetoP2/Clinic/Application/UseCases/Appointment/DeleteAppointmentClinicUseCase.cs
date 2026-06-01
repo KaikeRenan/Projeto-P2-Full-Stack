@@ -1,8 +1,7 @@
-﻿
-using ProjetoP2.Clinic.Domain.IRepositories;
+﻿using ProjetoP2.Clinic.Domain.IRepositories;
 
 
-namespace ProjetoP2.Clinic.Application.UseCases.DeleteAppointmentUseCase
+namespace ProjetoP2.Clinic.Application.UseCases.Appointment
 {
     public class DeleteAppointmentClinicUseCase
     {

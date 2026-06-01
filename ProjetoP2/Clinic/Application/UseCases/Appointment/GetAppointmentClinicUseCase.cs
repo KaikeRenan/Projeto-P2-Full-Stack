@@ -2,7 +2,7 @@
 using ProjetoP2.Clinic.Domain.IRepositories;
 using ProjetoP2.Infrastructure.Data;
 
-namespace ProjetoP2.Clinic.Application.UseCases.GetAppointmentUseCase
+namespace ProjetoP2.Clinic.Application.UseCases.Appointment
 {
     public class GetAppointmentClinicUseCase
     {
@@ -13,9 +13,9 @@ namespace ProjetoP2.Clinic.Application.UseCases.GetAppointmentUseCase
             _AppointmentRepository = AppointmentRepository;
         }
 
-        public List<ResponseAppointmentClinicDto> Run()
+        public List<ResponseVetClinicDto> Run()
         {
-            return _AppointmentRepository.GetAll().Select(appointment => new ResponseAppointmentClinicDto
+            return _AppointmentRepository.GetAll().Select(appointment => new ResponseVetClinicDto
             {
                 Id = appointment.Id,
                 VetId = appointment.VetId,

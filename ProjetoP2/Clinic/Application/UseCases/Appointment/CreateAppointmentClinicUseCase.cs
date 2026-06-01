@@ -1,10 +1,8 @@
-﻿using Microsoft.JSInterop.Infrastructure;
-using ProjetoP2.Clinic.Application.DTOs.Appointment;
+﻿using ProjetoP2.Clinic.Application.DTOs.Appointment;
 using ProjetoP2.Clinic.Domain.Entities;
 using ProjetoP2.Clinic.Domain.IRepositories;
-using ProjetoP2.Shared.ValueObjects;
 
-namespace ProjetoP2.Clinic.Application.UseCases.CreateAppointmentUseCase
+namespace ProjetoP2.Clinic.Application.UseCases.Appointment
 {
     public class CreateAppointmentClinicUseCase
     {
@@ -15,7 +13,7 @@ namespace ProjetoP2.Clinic.Application.UseCases.CreateAppointmentUseCase
             this._appointmentRepository = appointmentRepository;
         }
 
-        public ResponseAppointmentClinicDto Run(CreateAppointmentClinicDto dto)
+        public ResponseVetClinicDto Run(CreateAppointmentClinicDto dto)
         {
             var appointment = new AppointmentClinic(
                 dto.VetId,
@@ -25,7 +23,7 @@ namespace ProjetoP2.Clinic.Application.UseCases.CreateAppointmentUseCase
 
             _appointmentRepository.Create(appointment);
 
-            return new ResponseAppointmentClinicDto
+            return new ResponseVetClinicDto
             {
                 VetId = appointment.VetId,
                 PetId = appointment.PetId,

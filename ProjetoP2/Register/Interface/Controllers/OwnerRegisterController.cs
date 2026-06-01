@@ -12,7 +12,10 @@ namespace ProjetoP2.Register.Interface.Controllers
         private readonly GetOwnerRegisterUseCase _getUseCase;
         private readonly DeleteOwnerRegisterUseCase _deleteUseCase;
 
-        public OwnerRegisterController(CreateOwnerRegisterUseCase createUseCase, GetOwnerRegisterUseCase getUseCase, DeleteOwnerRegisterUseCase deleteUseCase)
+        public OwnerRegisterController(
+            CreateOwnerRegisterUseCase createUseCase, 
+            GetOwnerRegisterUseCase getUseCase, 
+            DeleteOwnerRegisterUseCase deleteUseCase)
         {
             _createUseCase = createUseCase;
             _getUseCase = getUseCase;

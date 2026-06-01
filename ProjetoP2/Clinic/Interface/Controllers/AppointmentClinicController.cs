@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProjetoP2.Clinic.Application.DTOs.Appointment;
 using ProjetoP2.Clinic.Application.UseCases;
-using ProjetoP2.Clinic.Application.UseCases.CreateAppointmentUseCase;
-using ProjetoP2.Clinic.Application.UseCases.DeleteAppointmentUseCase;
-using ProjetoP2.Clinic.Application.UseCases.GetAppointmentUseCase;
+using ProjetoP2.Clinic.Application.UseCases.Appointment;
 
 namespace ProjetoP2.Register.Interface.Controllers
 {
@@ -15,7 +13,10 @@ namespace ProjetoP2.Register.Interface.Controllers
         private readonly GetAppointmentClinicUseCase _getUseCase;
         private readonly DeleteAppointmentClinicUseCase _deleteUseCase;
 
-        public AppointmentClinicController(CreateAppointmentClinicUseCase createUseCase, GetAppointmentClinicUseCase getUseCase, DeleteAppointmentClinicUseCase deleteUseCase)
+        public AppointmentClinicController(
+            CreateAppointmentClinicUseCase createUseCase, 
+            GetAppointmentClinicUseCase getUseCase, 
+            DeleteAppointmentClinicUseCase deleteUseCase)
         {
             _createUseCase = createUseCase;
             _getUseCase = getUseCase;
