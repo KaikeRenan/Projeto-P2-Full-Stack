@@ -1,4 +1,5 @@
 ﻿using ProjetoP2.Clinic.Application.DTOs.Appointment;
+using ProjetoP2.Clinic.Application.DTOs.Vet;
 using ProjetoP2.Clinic.Domain.Entities;
 using ProjetoP2.Clinic.Domain.IRepositories;
 using ProjetoP2.Clinic.Domain.ValueObjects;
@@ -15,7 +16,7 @@ namespace ProjetoP2.Clinic.Application.UseCases.Vet
             this._vetRepository = vetRepository;
         }
 
-        public ResponseVetClinicDto Run(CreateAppointmentClinicDto dto)
+        public ResponseVetClinicDto Run(CreateVetClinicDto dto)
         {
             var vet = new VetClinic(
                 dto.FirstName,

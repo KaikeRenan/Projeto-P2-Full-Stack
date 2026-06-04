@@ -1,6 +1,6 @@
 ﻿namespace ProjetoP2.Clinic.Application.DTOs.Appointment
 {
-    public class ResponseVetClinicDto
+    public class ResponseAppointmentClinicDto
     {
         public Guid Id { get; set; }
         public Guid VetId { get; set; }

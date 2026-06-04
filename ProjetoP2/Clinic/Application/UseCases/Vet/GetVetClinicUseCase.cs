@@ -1,6 +1,7 @@
-﻿using ProjetoP2.Clinic.Application.DTOs.Appointment;
+﻿
+using ProjetoP2.Clinic.Application.DTOs.Vet;
 using ProjetoP2.Clinic.Domain.IRepositories;
-using ProjetoP2.Infrastructure.Data.Entities;
+
 
 namespace ProjetoP2.Clinic.Application.UseCases.Vet
 {
@@ -13,7 +14,7 @@ namespace ProjetoP2.Clinic.Application.UseCases.Vet
             _vetRepository = vetRepository;
         }
 
-        public List<GetVetClinicUseCase> Run()
+        public List<ResponseVetClinicDto> Run()
         {
             return _vetRepository.GetAll().Select(vet => new ResponseVetClinicDto
             {

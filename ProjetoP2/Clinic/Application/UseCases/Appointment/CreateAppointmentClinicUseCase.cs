@@ -13,7 +13,7 @@ namespace ProjetoP2.Clinic.Application.UseCases.Appointment
             this._appointmentRepository = appointmentRepository;
         }
 
-        public ResponseVetClinicDto Run(CreateAppointmentClinicDto dto)
+        public ResponseAppointmentClinicDto Run(CreateAppointmentClinicDto dto)
         {
             var appointment = new AppointmentClinic(
                 dto.VetId,
@@ -23,7 +23,7 @@ namespace ProjetoP2.Clinic.Application.UseCases.Appointment
 
             _appointmentRepository.Create(appointment);
 
-            return new ResponseVetClinicDto
+            return new ResponseAppointmentClinicDto
             {
                 VetId = appointment.VetId,
                 PetId = appointment.PetId,

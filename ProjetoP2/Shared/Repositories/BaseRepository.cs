@@ -20,7 +20,7 @@ namespace ProjetoP2.Shared.Repositories
             _dbSet.Add(entity);
             _context.SaveChanges();
         }
-
+            
         virtual public T? GetById(Guid Id)
         {
             return _dbSet.FirstOrDefault(entity => entity.Id == Id && entity.RemovedAt == null);

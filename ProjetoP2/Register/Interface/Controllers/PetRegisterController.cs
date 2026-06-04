@@ -23,7 +23,7 @@ namespace ProjetoP2.Register.Interface.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(CreatePetRegisterDto dto) 
+        public IActionResult Create([FromBody] CreatePetRegisterDto dto) 
         {
             var result = _createUseCase.Run(dto);
             return Ok(result);

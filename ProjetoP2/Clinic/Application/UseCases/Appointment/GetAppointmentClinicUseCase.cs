@@ -1,6 +1,7 @@
-﻿using ProjetoP2.Clinic.Application.DTOs.Appointment;
+﻿
+using ProjetoP2.Clinic.Application.DTOs.Appointment;
 using ProjetoP2.Clinic.Domain.IRepositories;
-using ProjetoP2.Infrastructure.Data;
+
 
 namespace ProjetoP2.Clinic.Application.UseCases.Appointment
 {
@@ -13,9 +14,9 @@ namespace ProjetoP2.Clinic.Application.UseCases.Appointment
             _AppointmentRepository = AppointmentRepository;
         }
 
-        public List<ResponseVetClinicDto> Run()
+        public List<ResponseAppointmentClinicDto> Run()
         {
-            return _AppointmentRepository.GetAll().Select(appointment => new ResponseVetClinicDto
+            return _AppointmentRepository.GetAll().Select(appointment => new ResponseAppointmentClinicDto
             {
                 Id = appointment.Id,
                 VetId = appointment.VetId,
