@@ -6,42 +6,42 @@ namespace ProjetoP2.Shared.Repositories
 {
     public class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
     {
-        public readonly DbContext _context;
-        public readonly DbSet<T> _dbSet;
+        protected readonly DbContext _dbContext;
+        protected readonly DbSet<T> _dbSet;
 
         public BaseRepository(DbContext context)
         {
-            _context = context;
+            _dbContext = context;
             _dbSet = context.Set<T>();
         }
 
-        virtual public void Create(T entity)
+        public virtual async Task CreateAsync(T entity)
         {
-            _dbSet.Add(entity);
-            _context.SaveChanges();
-        }
-            
-        virtual public T? GetById(Guid Id)
-        {
-            return _dbSet.FirstOrDefault(entity => entity.Id == Id && entity.RemovedAt == null);
+            await _dbSet.AddAsync(entity);
+            await _dbContext.SaveChangesAsync();
         }
 
-        virtual public List<T> GetAll()
+        public virtual async Task<T?> GetByIdAsync(Guid Id)
         {
-            return _dbSet.Where(entity => entity.RemovedAt == null).ToList();
+            return await _dbSet.FirstOrDefaultAsync(entity => entity.Id == Id && entity.RemovedAt == null);
         }
 
-        virtual public void Update(T entity)
+        public virtual async Task<List<T>> GetAllAsync()
+        {
+            return await _dbSet.Where(entity => entity.RemovedAt == null).ToListAsync();
+        }
+
+        public virtual async Task UpdateAsync(T entity)
         {
             _dbSet.Update(entity);
-            _context.SaveChanges();
+            await _dbContext.SaveChangesAsync();
         }
 
-        virtual public void Delete(T entity)
+        public virtual async Task DeleteAsync(T entity)
         {
             entity.RemovedAt = DateTime.UtcNow;
             _dbSet.Update(entity);
-            _context.SaveChanges();
+            await _dbContext.SaveChangesAsync();
         }
     }
 }

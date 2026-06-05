@@ -1,5 +1,6 @@
 ﻿using ProjetoP2.Register.Application.DTOs.Owner;
 using ProjetoP2.Register.Domain.Entities;
+using ProjetoP2.Register.Domain.Exceptions;
 using ProjetoP2.Register.Domain.IRepositories;
 using ProjetoP2.Shared.ValueObjects;
 
@@ -14,8 +15,14 @@ namespace ProjetoP2.Register.Application.UseCases.OwnerUseCases
             this._owerRepository = owerRepository;
         }
 
-        public ResponseOwnerRegisterDto Run(CreateOwnerRegisterDto dto)
+        public async Task<ResponseOwnerRegisterDto> Run(CreateOwnerRegisterDto dto)
         {
+            if (await _owerRepository.ExistsByCpfAsync(dto.CPF))
+                throw new ExceptionDuplicateCpf();
+
+            if (await _owerRepository.ExistsByEmailAsync(dto.Email))
+                throw new ExceptionDuplicateEmail();
+
             var owner = new OwnerRegister(
                 dto.FirstName, 
                 dto.LastName,
@@ -24,7 +31,7 @@ namespace ProjetoP2.Register.Application.UseCases.OwnerUseCases
                 new CPF(dto.CPF)
             );
 
-            _owerRepository.Create(owner);
+            await _owerRepository.CreateAsync(owner);
 
             return new ResponseOwnerRegisterDto
             {

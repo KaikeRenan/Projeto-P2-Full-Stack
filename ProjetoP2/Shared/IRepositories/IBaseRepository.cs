@@ -4,10 +4,10 @@ namespace ProjetoP2.Shared.IRepositories
 {
     public interface IBaseRepository<T> where T : BaseEntity
     {
-        public List<T> GetAll();
-        public T? GetById(Guid Id);
-        public void Create(T entity);
-        public void Update(T entity);
-        public void Delete(T entity);
+        public Task<List<T>> GetAllAsync();
+        public Task<T?> GetByIdAsync(Guid Id);
+        public Task CreateAsync(T entity);
+        public Task UpdateAsync(T entity);
+        public Task DeleteAsync(T entity);
     }
 }

@@ -6,7 +6,6 @@ namespace ProjetoP2.Infrastructure.Data.Context
 {
     public class Context:DbContext
     {
-
         public DbSet<OwnerRegister> OwnerRegisters { get; set; } = null!;
         public DbSet<PetRegister> PetRegisters { get; set; } = null!;
         public DbSet<AppointmentRegister> AppointmentRegisters { get; set; } = null!;
