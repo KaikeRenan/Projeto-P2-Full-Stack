@@ -5,11 +5,11 @@ using ProjetoP2.Clinic.Domain.IRepositories;
 
 namespace ProjetoP2.Clinic.Application.UseCases.Vet
 {
-    public class GetVetClinicUseCase
+    public class GetAllVetClinicUseCase
     {
         private readonly IVetClinicRepository _vetRepository;
 
-        public GetVetClinicUseCase(IVetClinicRepository vetRepository)
+        public GetAllVetClinicUseCase(IVetClinicRepository vetRepository)
         {
             _vetRepository = vetRepository;
         }

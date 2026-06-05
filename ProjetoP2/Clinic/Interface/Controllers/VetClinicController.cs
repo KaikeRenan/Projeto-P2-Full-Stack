@@ -9,12 +9,12 @@ namespace ProjetoP2.Clinic.Interface.Controllers
     public class VetClinicController : ControllerBase
     {
         private readonly CreateVetClinicUseCase _createUseCase;
-        private readonly GetVetClinicUseCase _getUseCase;
+        private readonly GetAllVetClinicUseCase _getUseCase;
         private readonly DeleteVetClinicUseCase _deleteUseCase;
 
         public VetClinicController(
             CreateVetClinicUseCase createUseCase,
-            GetVetClinicUseCase getUseCase,
+            GetAllVetClinicUseCase getUseCase,
             DeleteVetClinicUseCase deleteUseCase)
         {
             _createUseCase = createUseCase;

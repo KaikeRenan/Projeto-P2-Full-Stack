@@ -3,18 +3,20 @@ using ProjetoP2.Register.Domain.IRepositories;
 
 namespace ProjetoP2.Register.Application.UseCases.OwnerUseCases
 {
-    public class GetOwnerRegisterUseCase
+    public class GetAllOwnerRegisterUseCase
     {
         private readonly IOwnerRegisterRepository _ownerRepository;
 
-        public GetOwnerRegisterUseCase(IOwnerRegisterRepository owerRepository)
+        public GetAllOwnerRegisterUseCase(IOwnerRegisterRepository owerRepository)
         {
             _ownerRepository = owerRepository;
         }
 
-        public List<ResponseOwnerRegisterDto> Run()
+        public async Task<List<ResponseOwnerRegisterDto>> Run()
         {
-            return _ownerRepository.GetAll().Select(owner => new ResponseOwnerRegisterDto
+            var owners = await _ownerRepository.GetAllAsync();
+
+            return owners.Select(owner => new ResponseOwnerRegisterDto
             {
                 Id = owner.Id,
                 FirstName = owner.FirstName,

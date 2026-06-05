@@ -5,11 +5,11 @@ using ProjetoP2.Clinic.Domain.IRepositories;
 
 namespace ProjetoP2.Clinic.Application.UseCases.Appointment
 {
-    public class GetAppointmentClinicUseCase
+    public class GetAllAppointmentClinicUseCase
     {
         private readonly IAppointmentClinicRepository _AppointmentRepository;
 
-        public GetAppointmentClinicUseCase(IAppointmentClinicRepository AppointmentRepository)
+        public GetAllAppointmentClinicUseCase(IAppointmentClinicRepository AppointmentRepository)
         {
             _AppointmentRepository = AppointmentRepository;
         }

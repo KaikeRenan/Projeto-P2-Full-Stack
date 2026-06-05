@@ -11,14 +11,14 @@ namespace ProjetoP2.Register.Application.UseCases.OwnerUseCases
             _owerRepository = owerRepository;
         }
 
-        public void Run(Guid Id) 
+        public async Task Run(Guid Id) 
         {
-            var owner = _owerRepository.GetById(Id);
+            var owner = await _owerRepository.GetByIdAsync(Id);
 
             if (owner == null)
                 throw new Exception("Dono não foi encontrado");
 
-            _owerRepository.Delete(owner);
+            await _owerRepository.DeleteAsync(owner);
         }
     }
 }

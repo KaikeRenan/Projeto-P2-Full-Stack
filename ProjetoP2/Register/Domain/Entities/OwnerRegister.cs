@@ -24,5 +24,15 @@ namespace ProjetoP2.Register.Domain.Entities
         }
 
         public void AddPet(PetRegister pet) { Pets.Add(pet); }
+
+        public void RemovePet(PetRegister pet) { Pets.Remove(pet); }
+
+        public void Update(string firstName, string lastName, Email email, PhoneNumber phoneNumber)
+        {
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.Email = email;
+            this.PhoneNumber = phoneNumber;
+        }
     }
 }

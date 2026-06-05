@@ -10,12 +10,12 @@ namespace ProjetoP2.Register.Interface.Controllers
     public class AppointmentClinicController : ControllerBase
     {
         private readonly CreateAppointmentClinicUseCase _createUseCase;
-        private readonly GetAppointmentClinicUseCase _getUseCase;
+        private readonly GetAllAppointmentClinicUseCase _getUseCase;
         private readonly DeleteAppointmentClinicUseCase _deleteUseCase;
 
         public AppointmentClinicController(
             CreateAppointmentClinicUseCase createUseCase, 
-            GetAppointmentClinicUseCase getUseCase, 
+            GetAllAppointmentClinicUseCase getUseCase, 
             DeleteAppointmentClinicUseCase deleteUseCase)
         {
             _createUseCase = createUseCase;

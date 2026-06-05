@@ -9,12 +9,12 @@ namespace ProjetoP2.Register.Interface.Controllers
     public class PetRegisterController : ControllerBase
     {
         private readonly CreatePetRegisterUseCase _createUseCase;
-        private readonly GetPetRegisterUseCase _getUseCase;
+        private readonly GetAllPetRegisterUseCase _getUseCase;
         private readonly DeletePetRegisterUseCase _deleteUseCase;
 
         public PetRegisterController(
             CreatePetRegisterUseCase createUseCase, 
-            GetPetRegisterUseCase getUseCase, 
+            GetAllPetRegisterUseCase getUseCase, 
             DeletePetRegisterUseCase deleteUseCase)
         {
             _createUseCase = createUseCase;

@@ -3,11 +3,11 @@ using ProjetoP2.Register.Domain.IRepositories;
 
 namespace ProjetoP2.Register.Application.UseCases.PetUseCases
 {
-    public class GetPetRegisterUseCase
+    public class GetAllPetRegisterUseCase
     {
         private readonly IPetRegisterRepository _petRepository;
         
-        public GetPetRegisterUseCase(IPetRegisterRepository petRepository)
+        public GetAllPetRegisterUseCase(IPetRegisterRepository petRepository)
         {
             _petRepository = petRepository;
         }

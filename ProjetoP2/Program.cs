@@ -22,20 +22,24 @@ builder.Services.AddScoped<IVetClinicRepository, VetClinicRepository>();
 builder.Services.AddScoped<IAppointmentClinicRepository, AppointmentClinicRepository>();
 
 builder.Services.AddScoped<CreateOwnerRegisterUseCase>();
-builder.Services.AddScoped<GetOwnerRegisterUseCase>();
+builder.Services.AddScoped<GetByIdOwnerRegisterUseCase>();
+builder.Services.AddScoped<GetAllOwnerRegisterUseCase>();
 builder.Services.AddScoped<DeleteOwnerRegisterUseCase>();
 
 builder.Services.AddScoped<CreatePetRegisterUseCase>();
-builder.Services.AddScoped<GetPetRegisterUseCase>();
+//builder.Services.AddScoped<GetByIdPetRegisterUseCase>();
+builder.Services.AddScoped<GetAllPetRegisterUseCase>();
 builder.Services.AddScoped<DeletePetRegisterUseCase>();
 
 builder.Services.AddScoped<CreateVetClinicUseCase>();
+//builder.Services.AddScoped<GetByIdVetClinicUseCase>();
+builder.Services.AddScoped<GetAllVetClinicUseCase>();
 builder.Services.AddScoped<DeleteVetClinicUseCase>();
-builder.Services.AddScoped<GetVetClinicUseCase>();
 
 builder.Services.AddScoped<CreateAppointmentClinicUseCase>();
+//builder.Services.AddScoped<GetByIdAppointmentClinicUseCase>();
+builder.Services.AddScoped<GetAllAppointmentClinicUseCase>();
 builder.Services.AddScoped<DeleteAppointmentClinicUseCase>();
-builder.Services.AddScoped<GetAppointmentClinicUseCase>();
 
 string mySqlConnection = builder.Configuration.GetConnectionString("DefaultConnection") ?? "DefaultConnection";
 builder.Services.AddDbContext<Context>(options => options.UseMySql(mySqlConnection, ServerVersion.AutoDetect(mySqlConnection)));
