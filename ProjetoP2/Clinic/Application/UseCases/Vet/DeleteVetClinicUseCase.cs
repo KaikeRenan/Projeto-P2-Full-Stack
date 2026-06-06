@@ -8,17 +8,17 @@ namespace ProjetoP2.Clinic.Application.UseCases.Vet
 
         public DeleteVetClinicUseCase(IVetClinicRepository vetRepository)
         {
-            _vetRepository = vetRepository;
+            this._vetRepository = vetRepository;
         }
 
-        public void Run(Guid Id)
+        public async Task Run(Guid Id)
         {
-            var vet = _vetRepository.GetById(Id);
+            var vet = await _vetRepository.GetByIdAsync(Id);
 
             if (vet == null)
-                throw new Exception("Veterinário não foi encontrado");
+                throw new Exception("Veterinário não encontrado");
 
-            _vetRepository.Delete(vet);
+            await _vetRepository.DeleteAsync(vet);
         }
     }
 }

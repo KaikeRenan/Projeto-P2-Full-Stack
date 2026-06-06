@@ -16,14 +16,14 @@ namespace ProjetoP2.Register.Infrastructure.Repositories
             _appointments = context.Set<Appointment>();
         }
 
-        public override void Create(AppointmentRegister entity)
+        public override async Task CreateAsync(AppointmentRegister entity)
         {
             var appointment = new Appointment(entity.VetId, entity.PetId, entity.DateAppointment);
             _appointments.Add(appointment);
-            _context.SaveChanges();
+            _dbContext.SaveChanges();
         }
 
-        public override AppointmentRegister? GetById(Guid id)
+        public override async Task<AppointmentRegister?> GetByIdAsync(Guid id)
         {
             var appointment = _appointments
                 .FirstOrDefault(a => a.Id == id && a.RemovedAt == null);
@@ -33,7 +33,7 @@ namespace ProjetoP2.Register.Infrastructure.Repositories
             return MapToDomain(appointment);
         }
 
-        public override List<AppointmentRegister> GetAll()
+        public override async Task<List<AppointmentRegister>> GetAllAsync()
         {
             return _appointments
                 .Where(a => a.RemovedAt == null)
@@ -41,7 +41,7 @@ namespace ProjetoP2.Register.Infrastructure.Repositories
                 .ToList();
         }
 
-        public override void Update(AppointmentRegister entity)
+        public override async Task UpdateAsync(AppointmentRegister entity)
         {
             var appointment = _appointments
                 .FirstOrDefault(a => a.Id == entity.Id && a.RemovedAt == null);
@@ -51,10 +51,10 @@ namespace ProjetoP2.Register.Infrastructure.Repositories
             appointment.Reschedule(entity.DateAppointment);
 
             _appointments.Update(appointment);
-            _context.SaveChanges();
+            _dbContext.SaveChanges();
         }
 
-        public override void Delete(AppointmentRegister entity)
+        public override async Task DeleteAsync(AppointmentRegister entity)
         {
             var appointment = _appointments
                 .FirstOrDefault(a => a.Id == entity.Id && a.RemovedAt == null);
@@ -63,7 +63,7 @@ namespace ProjetoP2.Register.Infrastructure.Repositories
 
             appointment.RemovedAt = DateTime.UtcNow;
             _appointments.Update(appointment);
-            _context.SaveChanges();
+            _dbContext.SaveChanges();
         }
 
         private static AppointmentRegister MapToDomain(Appointment a)

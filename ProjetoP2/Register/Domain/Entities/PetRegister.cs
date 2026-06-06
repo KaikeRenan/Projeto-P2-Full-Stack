@@ -30,9 +30,9 @@ namespace ProjetoP2.Register.Domain.Entities
         public PetRegister(
             string name,
             Color color,
-            Specie specie, 
-            Sex sex, 
-            bool castrated, 
+            Specie specie,
+            Sex sex,
+            bool castrated,
             bool community,
             bool microchipped,
             DateTime birthDate,
@@ -56,6 +56,39 @@ namespace ProjetoP2.Register.Domain.Entities
             if (petRG != null && ownerId == null)
                 throw new ArgumentException("Pets com RG devem possuir Dono");
 
+            this.Name = name;
+            this.Color = color;
+            this.Specie = specie;
+            this.Sex = sex;
+            this.Castrated = castrated;
+            this.Community = community;
+            this.Microchipped = microchipped;
+            this.BirthDate = birthDate;
+            this.PetRG = petRG;
+            this.MicrochippedNumber = microchippedNumber;
+            this.State = state;
+            this.City = city;
+            this.PhotoURL = photoURL;
+            this.OwnerId = ownerId;
+        }
+
+        public void Update(
+            string name,
+            Color color,
+            Specie specie,
+            Sex sex,
+            bool castrated,
+            bool community,
+            bool microchipped,
+            DateTime birthDate,
+            PetRG? petRG = null,
+            int? microchippedNumber = null,
+            State? state = null,
+            City? city = null,
+            string? photoURL = null,
+            Guid? ownerId = null
+            )
+        {
             this.Name = name;
             this.Color = color;
             this.Specie = specie;

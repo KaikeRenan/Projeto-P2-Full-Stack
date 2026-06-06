@@ -31,7 +31,6 @@ namespace ProjetoP2.Infrastructure.Data.Context
                      .IsRequired()
                      .HasMaxLength(100);
 
-                // Email
                 owner.OwnsOne(o => o.Email, email =>
                 {
                     email.Property(e => e.Value)
@@ -41,7 +40,6 @@ namespace ProjetoP2.Infrastructure.Data.Context
                     email.HasIndex(e => e.Value).IsUnique();
                 });
 
-                // PhoneNumber
                 owner.OwnsOne(o => o.PhoneNumber, phone =>
                 {
                     phone.Property(p => p.Value)
@@ -50,7 +48,6 @@ namespace ProjetoP2.Infrastructure.Data.Context
                          .HasMaxLength(20);
                 });
 
-                // CPF
                 owner.OwnsOne(o => o.CPF, cpf =>
                 {
                     cpf.Property(c => c.Value)
@@ -62,14 +59,12 @@ namespace ProjetoP2.Infrastructure.Data.Context
 
                 owner.HasQueryFilter(o => o.RemovedAt == null);
 
-                // ── Relacionamento 1:N → PetRegister 
                 owner.HasMany(o => o.Pets)
                      .WithOne(p => p.Owner)
                      .HasForeignKey(p => p.OwnerId)
                      .OnDelete(DeleteBehavior.Restrict);
             });
 
-            // ── PetRegister 
             modelBuilder.Entity<PetRegister>(pet =>
             {
                 pet.ToTable("PetRegisters");
@@ -112,7 +107,6 @@ namespace ProjetoP2.Infrastructure.Data.Context
 
                 pet.Property(p => p.OwnerId);
 
-                // State e City (nullable Value Objects)
                 pet.OwnsOne(p => p.State, state =>
                 {
                     state.Property(s => s.Value)
@@ -127,7 +121,6 @@ namespace ProjetoP2.Infrastructure.Data.Context
                         .HasMaxLength(100);
                 });
 
-                // PetRG (nullable Value Object)
                 pet.OwnsOne(p => p.PetRG, rg =>
                 {
                     rg.Property(r => r.Value)
@@ -138,7 +131,6 @@ namespace ProjetoP2.Infrastructure.Data.Context
                 pet.HasQueryFilter(p => p.RemovedAt == null);
             });
 
-            // ── AppointmentRegister 
             modelBuilder.Entity<AppointmentRegister>(appt =>
             {
                 appt.ToTable("AppointmentRegisters");

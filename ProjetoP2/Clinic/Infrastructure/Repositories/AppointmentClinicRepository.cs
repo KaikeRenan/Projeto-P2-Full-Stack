@@ -18,14 +18,14 @@ namespace ProjetoP2.Clinic.Infrastructure.Repositories
             _vets = context.Set<VetClinic>();
         }
 
-        public override void Create(AppointmentClinic entity)
+        public override async Task CreateAsync(AppointmentClinic entity)
         {
             var appointment = new Appointment(entity.VetId, entity.PetId, entity.DateAppointment, entity.Notes);
             _appointments.Add(appointment);
-            _context.SaveChanges();
+            _dbContext.SaveChanges();
         }
 
-        public override AppointmentClinic? GetById(Guid id)
+        public override async Task<AppointmentClinic?> GetByIdAsync(Guid id)
         {
             var appointment = _appointments
                 .FirstOrDefault(a => a.Id == id && a.RemovedAt == null);
@@ -38,7 +38,7 @@ namespace ProjetoP2.Clinic.Infrastructure.Repositories
             return MapToDomain(appointment, vet);
         }
 
-        public override List<AppointmentClinic> GetAll()
+        public override async Task<List<AppointmentClinic>> GetAllAsync()
         {
             var appointments = _appointments
                 .Where(a => a.RemovedAt == null)
@@ -54,7 +54,7 @@ namespace ProjetoP2.Clinic.Infrastructure.Repositories
                 .ToList();
         }
 
-        public override void Update(AppointmentClinic entity)
+        public override async Task UpdateAsync(AppointmentClinic entity)
         {
             var appointment = _appointments
                 .FirstOrDefault(a => a.Id == entity.Id && a.RemovedAt == null);
@@ -66,10 +66,10 @@ namespace ProjetoP2.Clinic.Infrastructure.Repositories
             appointment.UpdateNotes(entity.Notes);
 
             _appointments.Update(appointment);
-            _context.SaveChanges();
+            _dbContext.SaveChanges();
         }
 
-        public override void Delete(AppointmentClinic entity)
+        public override async Task DeleteAsync(AppointmentClinic entity)
         {
             var appointment = _appointments
                 .FirstOrDefault(a => a.Id == entity.Id && a.RemovedAt == null);
@@ -78,7 +78,7 @@ namespace ProjetoP2.Clinic.Infrastructure.Repositories
 
             appointment.RemovedAt = DateTime.UtcNow;
             _appointments.Update(appointment);
-            _context.SaveChanges();
+            _dbContext.SaveChanges();
         }
 
         private static AppointmentClinic MapToDomain(Appointment a, VetClinic? vet)

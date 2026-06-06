@@ -28,5 +28,12 @@ namespace ProjetoP2.Clinic.Domain.Entities
             Vet = vet;
             VetId = vet.Id;
         }
+
+        public void Update(Guid vetId, Guid petId, DateTime dateAppointment)
+        {
+            VetId = vetId;
+            PetId = petId;
+            DateAppointment = dateAppointment;
+        }
     }
 }

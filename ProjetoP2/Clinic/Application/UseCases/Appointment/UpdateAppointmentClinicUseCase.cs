@@ -1,17 +1,16 @@
 ﻿using ProjetoP2.Clinic.Application.DTOs.Appointment;
-using ProjetoP2.Clinic.Domain.Entities;
 using ProjetoP2.Clinic.Domain.IRepositories;
 using ProjetoP2.Register.Domain.IRepositories;
 
 namespace ProjetoP2.Clinic.Application.UseCases.Appointment
 {
-    public class CreateAppointmentClinicUseCase
+    public class UpdateAppointmentClinicUseCase
     {
         private readonly IAppointmentClinicRepository _appointmentRepository;
         private readonly IVetClinicRepository _vetRepository;
         private readonly IPetRegisterRepository _petRepository;
 
-        public CreateAppointmentClinicUseCase(
+        public UpdateAppointmentClinicUseCase(
             IAppointmentClinicRepository appointmentRepository,
             IVetClinicRepository vetRepository,
             IPetRegisterRepository petRepository)
@@ -21,8 +20,13 @@ namespace ProjetoP2.Clinic.Application.UseCases.Appointment
             _petRepository = petRepository;
         }
 
-        public async Task<ResponseAppointmentClinicDto> Run(CreateAppointmentClinicDto dto)
+        public async Task<ResponseAppointmentClinicDto> Run(UpdateAppointmentClinicDto dto)
         {
+            var appointment = await _appointmentRepository.GetByIdAsync(dto.Id);
+
+            if (appointment == null)
+                throw new Exception("Consulta não encontrada");
+
             var vet = await _vetRepository.GetByIdAsync(dto.VetId);
 
             if (vet == null)
@@ -33,13 +37,13 @@ namespace ProjetoP2.Clinic.Application.UseCases.Appointment
             if (pet == null)
                 throw new Exception("Pet não encontrado");
 
-            var appointment = new AppointmentClinic(
+            appointment.Update(
                 dto.VetId,
                 dto.PetId,
                 dto.DateAppointment
             );
 
-            await _appointmentRepository.CreateAsync(appointment);
+            await _appointmentRepository.UpdateAsync(appointment);
 
             return new ResponseAppointmentClinicDto
             {

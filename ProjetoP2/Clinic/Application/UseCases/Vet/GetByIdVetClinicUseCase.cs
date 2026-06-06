@@ -1,24 +1,25 @@
-﻿
-using ProjetoP2.Clinic.Application.DTOs.Vet;
+﻿using ProjetoP2.Clinic.Application.DTOs.Vet;
 using ProjetoP2.Clinic.Domain.IRepositories;
-
 
 namespace ProjetoP2.Clinic.Application.UseCases.Vet
 {
-    public class GetAllVetClinicUseCase
+    public class GetByIdVetClinicUseCase
     {
         private readonly IVetClinicRepository _vetRepository;
 
-        public GetAllVetClinicUseCase(IVetClinicRepository vetRepository)
+        public GetByIdVetClinicUseCase(IVetClinicRepository vetRepository)
         {
             this._vetRepository = vetRepository;
         }
 
-        public async Task<List<ResponseVetClinicDto>> Run()
+        public async Task<ResponseVetClinicDto> Run(Guid Id)
         {
-            var vets = await _vetRepository.GetAllAsync();
+            var vet = await _vetRepository.GetByIdAsync(Id);
 
-            return vets.Select(vet => new ResponseVetClinicDto
+            if (vet == null)
+                throw new Exception("Veterinário não encontrado");
+
+            return new ResponseVetClinicDto
             {
                 Id = vet.Id,
                 FirstName = vet.FirstName,
@@ -27,7 +28,7 @@ namespace ProjetoP2.Clinic.Application.UseCases.Vet
                 PhoneNumber = vet.PhoneNumber.Value,
                 CPF = vet.CPF.Value,
                 CRMV = vet.CRMV.Value,
-            }).ToList();
+            };
         }
     }
 }

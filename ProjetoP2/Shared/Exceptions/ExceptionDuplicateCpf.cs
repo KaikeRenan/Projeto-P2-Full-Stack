@@ -1,6 +1,4 @@
-﻿using ProjetoP2.Shared.Exceptions;
-
-namespace ProjetoP2.Register.Domain.Exceptions
+﻿namespace ProjetoP2.Shared.Exceptions
 {
     public sealed class ExceptionDuplicateCpf : BaseException
     {

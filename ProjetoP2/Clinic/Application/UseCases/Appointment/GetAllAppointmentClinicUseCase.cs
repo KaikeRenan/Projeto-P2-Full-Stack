@@ -1,22 +1,22 @@
-﻿
-using ProjetoP2.Clinic.Application.DTOs.Appointment;
+﻿using ProjetoP2.Clinic.Application.DTOs.Appointment;
 using ProjetoP2.Clinic.Domain.IRepositories;
-
 
 namespace ProjetoP2.Clinic.Application.UseCases.Appointment
 {
     public class GetAllAppointmentClinicUseCase
     {
-        private readonly IAppointmentClinicRepository _AppointmentRepository;
+        private readonly IAppointmentClinicRepository _appointmentRepository;
 
-        public GetAllAppointmentClinicUseCase(IAppointmentClinicRepository AppointmentRepository)
+        public GetAllAppointmentClinicUseCase(IAppointmentClinicRepository appointmentRepository)
         {
-            _AppointmentRepository = AppointmentRepository;
+            this._appointmentRepository = appointmentRepository;
         }
 
-        public List<ResponseAppointmentClinicDto> Run()
+        public async Task<List<ResponseAppointmentClinicDto>> Run()
         {
-            return _AppointmentRepository.GetAll().Select(appointment => new ResponseAppointmentClinicDto
+            var appointments = await _appointmentRepository.GetAllAsync();
+
+            return appointments.Select(appointment => new ResponseAppointmentClinicDto
             {
                 Id = appointment.Id,
                 VetId = appointment.VetId,

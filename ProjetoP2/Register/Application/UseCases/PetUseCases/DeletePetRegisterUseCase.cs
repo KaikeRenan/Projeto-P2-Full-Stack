@@ -11,14 +11,14 @@ namespace ProjetoP2.Register.Application.UseCases.PetUseCases
             _petRepository = petRepository;
         }
 
-        public void Run(Guid id) 
+        public async Task Run(Guid Id) 
         {
-            var pet = _petRepository.GetById(id);
+            var pet = await _petRepository.GetByIdAsync(Id);
 
             if (pet == null)
                 throw new Exception("Pet não encontrado");
 
-            _petRepository.Delete(pet);
+            await _petRepository.DeleteAsync(pet);
         }
     }
 }

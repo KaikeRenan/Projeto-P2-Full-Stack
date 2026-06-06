@@ -3,27 +3,30 @@ using ProjetoP2.Register.Domain.IRepositories;
 
 namespace ProjetoP2.Register.Application.UseCases.PetUseCases
 {
-    public class GetAllPetRegisterUseCase
+    public class GetByIdPetRegisterUseCase
     {
         private readonly IPetRegisterRepository _petRepository;
-        
-        public GetAllPetRegisterUseCase(IPetRegisterRepository petRepository)
+
+        public GetByIdPetRegisterUseCase(IPetRegisterRepository petRepository)
         {
             _petRepository = petRepository;
         }
 
-        public async Task<List<ResponsePetRegisterDto>> Run()
+        public async Task<ResponsePetRegisterDto> Run(Guid Id)
         {
-            var pets = await _petRepository.GetAllAsync();
+            var pet = await _petRepository.GetByIdAsync(Id);
 
-            return pets.Select(pet => new ResponsePetRegisterDto
+            if (pet == null)
+                throw new Exception("Pet não foi encontrado");
+
+            return new ResponsePetRegisterDto
             {
                 Id = pet.Id,
                 Name = pet.Name,
                 Specie = pet.Specie.Value,
                 Sex = pet.Sex.Value,
-                OwnerId = pet.OwnerId
-            }).ToList();
+                OwnerId = pet.OwnerId,
+            };
         }
     }
 }

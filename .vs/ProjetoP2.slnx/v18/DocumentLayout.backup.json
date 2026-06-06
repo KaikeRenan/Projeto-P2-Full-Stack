@@ -3,62 +3,6 @@
   "WorkspaceRootPath": "C:\\dev\\Projeto-P2-Full-Stack\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\clinic\\application\\usecases\\appointment\\getallappointmentclinicusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\clinic\\application\\usecases\\appointment\\getallappointmentclinicusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\register\\application\\usecases\\petusecases\\getallpetregisterusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\register\\application\\usecases\\petusecases\\getallpetregisterusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\shared\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\shared\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\register\\application\\usecases\\ownerusecases\\getbyidownerregisterusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\register\\application\\usecases\\ownerusecases\\getbyidownerregisterusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\register\\application\\usecases\\ownerusecases\\createownerregisterusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\register\\application\\usecases\\ownerusecases\\createownerregisterusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\register\\application\\usecases\\ownerusecases\\getallownerregisterusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\register\\application\\usecases\\ownerusecases\\getallownerregisterusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\register\\infrastructure\\repositories\\ownerregisterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\register\\infrastructure\\repositories\\ownerregisterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\appsettings.example.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\appsettings.example.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\register\\application\\usecases\\ownerusecases\\updateownerregisterusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\register\\application\\usecases\\ownerusecases\\updateownerregisterusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\register\\application\\usecases\\ownerusecases\\deleteownerregisterusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\register\\application\\usecases\\ownerusecases\\deleteownerregisterusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\register\\application\\dtos\\owner\\createownerregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\register\\application\\dtos\\owner\\createownerregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\register\\domain\\entities\\petregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\register\\domain\\entities\\petregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\register\\domain\\valueobjects\\color.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\register\\domain\\valueobjects\\color.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\register\\infrastructure\\repositories\\appointmentregisterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\register\\infrastructure\\repositories\\appointmentregisterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -67,44 +11,8 @@
       "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\clinic\\infrastructure\\repositories\\appointmentclinicrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\register\\domain\\entities\\ownerregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\register\\domain\\entities\\ownerregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\register\\application\\dtos\\owner\\updateownerregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\register\\application\\dtos\\owner\\updateownerregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\shared\\irepositories\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\shared\\irepositories\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\register\\domain\\irepositories\\iownerregisterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\register\\domain\\irepositories\\iownerregisterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\interface\\middlewares\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\interface\\middlewares\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\infrastructure\\data\\context\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\infrastructure\\data\\context\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\register\\infrastructure\\repositories\\petregisterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\register\\infrastructure\\repositories\\petregisterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\migrations\\20260604002832_firstmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\migrations\\20260604002832_firstmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\register\\domain\\irepositories\\ipetregisterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\register\\domain\\irepositories\\ipetregisterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\register\\domain\\irepositories\\iappointmentregisterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\register\\domain\\irepositories\\iappointmentregisterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\clinic\\infrastructure\\repositories\\vetclinicrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\clinic\\infrastructure\\repositories\\vetclinicrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -114,21 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GetAllAppointmentClinicUseCase.cs",
-              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Clinic\\Application\\UseCases\\Appointment\\GetAllAppointmentClinicUseCase.cs",
-              "RelativeDocumentMoniker": "ProjetoP2\\Clinic\\Application\\UseCases\\Appointment\\GetAllAppointmentClinicUseCase.cs",
-              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Clinic\\Application\\UseCases\\Appointment\\GetAllAppointmentClinicUseCase.cs",
-              "RelativeToolTip": "ProjetoP2\\Clinic\\Application\\UseCases\\Appointment\\GetAllAppointmentClinicUseCase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T14:04:37.5Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -136,321 +31,41 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "GetAllPetRegisterUseCase.cs",
-              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Application\\UseCases\\PetUseCases\\GetAllPetRegisterUseCase.cs",
-              "RelativeDocumentMoniker": "ProjetoP2\\Register\\Application\\UseCases\\PetUseCases\\GetAllPetRegisterUseCase.cs",
-              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Application\\UseCases\\PetUseCases\\GetAllPetRegisterUseCase.cs",
-              "RelativeToolTip": "ProjetoP2\\Register\\Application\\UseCases\\PetUseCases\\GetAllPetRegisterUseCase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T13:54:45.045Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GetByIdOwnerRegisterUseCase.cs",
-              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Application\\UseCases\\OwnerUseCases\\GetByIdOwnerRegisterUseCase.cs",
-              "RelativeDocumentMoniker": "ProjetoP2\\Register\\Application\\UseCases\\OwnerUseCases\\GetByIdOwnerRegisterUseCase.cs",
-              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Application\\UseCases\\OwnerUseCases\\GetByIdOwnerRegisterUseCase.cs",
-              "RelativeToolTip": "ProjetoP2\\Register\\Application\\UseCases\\OwnerUseCases\\GetByIdOwnerRegisterUseCase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T13:47:22.846Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GetAllOwnerRegisterUseCase.cs",
-              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Application\\UseCases\\OwnerUseCases\\GetAllOwnerRegisterUseCase.cs",
-              "RelativeDocumentMoniker": "ProjetoP2\\Register\\Application\\UseCases\\OwnerUseCases\\GetAllOwnerRegisterUseCase.cs",
-              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Application\\UseCases\\OwnerUseCases\\GetAllOwnerRegisterUseCase.cs",
-              "RelativeToolTip": "ProjetoP2\\Register\\Application\\UseCases\\OwnerUseCases\\GetAllOwnerRegisterUseCase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T13:31:01.478Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Program.cs",
-              "RelativeDocumentMoniker": "ProjetoP2\\Program.cs",
-              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Program.cs",
-              "RelativeToolTip": "ProjetoP2\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAACAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T06:33:25.315Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "OwnerRegisterRepository.cs",
-              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Infrastructure\\Repositories\\OwnerRegisterRepository.cs",
-              "RelativeDocumentMoniker": "ProjetoP2\\Register\\Infrastructure\\Repositories\\OwnerRegisterRepository.cs",
-              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Infrastructure\\Repositories\\OwnerRegisterRepository.cs",
-              "RelativeToolTip": "ProjetoP2\\Register\\Infrastructure\\Repositories\\OwnerRegisterRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T06:19:57.878Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BaseRepository.cs",
-              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Shared\\Repositories\\BaseRepository.cs",
-              "RelativeDocumentMoniker": "ProjetoP2\\Shared\\Repositories\\BaseRepository.cs",
-              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Shared\\Repositories\\BaseRepository.cs",
-              "RelativeToolTip": "ProjetoP2\\Shared\\Repositories\\BaseRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T06:19:30.12Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CreateOwnerRegisterUseCase.cs",
-              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Application\\UseCases\\OwnerUseCases\\CreateOwnerRegisterUseCase.cs",
-              "RelativeDocumentMoniker": "ProjetoP2\\Register\\Application\\UseCases\\OwnerUseCases\\CreateOwnerRegisterUseCase.cs",
-              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Application\\UseCases\\OwnerUseCases\\CreateOwnerRegisterUseCase.cs",
-              "RelativeToolTip": "ProjetoP2\\Register\\Application\\UseCases\\OwnerUseCases\\CreateOwnerRegisterUseCase.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACQAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T13:26:55.726Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UpdateOwnerRegisterUseCase.cs",
-              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Application\\UseCases\\OwnerUseCases\\UpdateOwnerRegisterUseCase.cs",
-              "RelativeDocumentMoniker": "ProjetoP2\\Register\\Application\\UseCases\\OwnerUseCases\\UpdateOwnerRegisterUseCase.cs",
-              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Application\\UseCases\\OwnerUseCases\\UpdateOwnerRegisterUseCase.cs",
-              "RelativeToolTip": "ProjetoP2\\Register\\Application\\UseCases\\OwnerUseCases\\UpdateOwnerRegisterUseCase.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAuwCAAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T13:26:51.342Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DeleteOwnerRegisterUseCase.cs",
-              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Application\\UseCases\\OwnerUseCases\\DeleteOwnerRegisterUseCase.cs",
-              "RelativeDocumentMoniker": "ProjetoP2\\Register\\Application\\UseCases\\OwnerUseCases\\DeleteOwnerRegisterUseCase.cs",
-              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Application\\UseCases\\OwnerUseCases\\DeleteOwnerRegisterUseCase.cs",
-              "RelativeToolTip": "ProjetoP2\\Register\\Application\\UseCases\\OwnerUseCases\\DeleteOwnerRegisterUseCase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T13:30:30.149Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "appsettings.Example.json",
-              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\appsettings.Example.json",
-              "RelativeDocumentMoniker": "ProjetoP2\\appsettings.Example.json",
-              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\appsettings.Example.json",
-              "RelativeToolTip": "ProjetoP2\\appsettings.Example.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-06-05T06:33:23.511Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CreateOwnerRegisterDto.cs",
-              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Application\\DTOs\\Owner\\CreateOwnerRegisterDto.cs",
-              "RelativeDocumentMoniker": "ProjetoP2\\Register\\Application\\DTOs\\Owner\\CreateOwnerRegisterDto.cs",
-              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Application\\DTOs\\Owner\\CreateOwnerRegisterDto.cs",
-              "RelativeToolTip": "ProjetoP2\\Register\\Application\\DTOs\\Owner\\CreateOwnerRegisterDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T13:26:06.295Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "PetRegister.cs",
-              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Domain\\Entities\\PetRegister.cs",
-              "RelativeDocumentMoniker": "ProjetoP2\\Register\\Domain\\Entities\\PetRegister.cs",
-              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Domain\\Entities\\PetRegister.cs",
-              "RelativeToolTip": "ProjetoP2\\Register\\Domain\\Entities\\PetRegister.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAIA8wBwAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T13:37:23.428Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Color.cs",
-              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Domain\\ValueObjects\\Color.cs",
-              "RelativeDocumentMoniker": "ProjetoP2\\Register\\Domain\\ValueObjects\\Color.cs",
-              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Domain\\ValueObjects\\Color.cs",
-              "RelativeToolTip": "ProjetoP2\\Register\\Domain\\ValueObjects\\Color.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAArwCQAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T06:30:09.222Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AppointmentRegisterRepository.cs",
-              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Infrastructure\\Repositories\\AppointmentRegisterRepository.cs",
-              "RelativeDocumentMoniker": "ProjetoP2\\Register\\Infrastructure\\Repositories\\AppointmentRegisterRepository.cs",
-              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Infrastructure\\Repositories\\AppointmentRegisterRepository.cs",
-              "RelativeToolTip": "ProjetoP2\\Register\\Infrastructure\\Repositories\\AppointmentRegisterRepository.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAWwCsAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T06:19:55.603Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
               "Title": "AppointmentClinicRepository.cs",
               "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Clinic\\Infrastructure\\Repositories\\AppointmentClinicRepository.cs",
               "RelativeDocumentMoniker": "ProjetoP2\\Clinic\\Infrastructure\\Repositories\\AppointmentClinicRepository.cs",
               "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Clinic\\Infrastructure\\Repositories\\AppointmentClinicRepository.cs",
               "RelativeToolTip": "ProjetoP2\\Clinic\\Infrastructure\\Repositories\\AppointmentClinicRepository.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAjwDgAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAwFEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T06:30:55.64Z",
+              "WhenOpened": "2026-06-06T19:22:49.474Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "OwnerRegister.cs",
-              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Domain\\Entities\\OwnerRegister.cs",
-              "RelativeDocumentMoniker": "ProjetoP2\\Register\\Domain\\Entities\\OwnerRegister.cs",
-              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Domain\\Entities\\OwnerRegister.cs",
-              "RelativeToolTip": "ProjetoP2\\Register\\Domain\\Entities\\OwnerRegister.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T13:35:56.376Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "UpdateOwnerRegisterDto.cs",
-              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Application\\DTOs\\Owner\\UpdateOwnerRegisterDto.cs",
-              "RelativeDocumentMoniker": "ProjetoP2\\Register\\Application\\DTOs\\Owner\\UpdateOwnerRegisterDto.cs",
-              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Application\\DTOs\\Owner\\UpdateOwnerRegisterDto.cs",
-              "RelativeToolTip": "ProjetoP2\\Register\\Application\\DTOs\\Owner\\UpdateOwnerRegisterDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T13:26:04.537Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "IOwnerRegisterRepository.cs",
-              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Domain\\IRepositories\\IOwnerRegisterRepository.cs",
-              "RelativeDocumentMoniker": "ProjetoP2\\Register\\Domain\\IRepositories\\IOwnerRegisterRepository.cs",
-              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Domain\\IRepositories\\IOwnerRegisterRepository.cs",
-              "RelativeToolTip": "ProjetoP2\\Register\\Domain\\IRepositories\\IOwnerRegisterRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T06:19:48.683Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "IBaseRepository.cs",
-              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Shared\\IRepositories\\IBaseRepository.cs",
-              "RelativeDocumentMoniker": "ProjetoP2\\Shared\\IRepositories\\IBaseRepository.cs",
-              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Shared\\IRepositories\\IBaseRepository.cs",
-              "RelativeToolTip": "ProjetoP2\\Shared\\IRepositories\\IBaseRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T06:19:39.623Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ExceptionMiddleware.cs",
-              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Interface\\Middlewares\\ExceptionMiddleware.cs",
-              "RelativeDocumentMoniker": "ProjetoP2\\Interface\\Middlewares\\ExceptionMiddleware.cs",
-              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Interface\\Middlewares\\ExceptionMiddleware.cs",
-              "RelativeToolTip": "ProjetoP2\\Interface\\Middlewares\\ExceptionMiddleware.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAuwCUAAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T06:35:05.995Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "PetRegisterRepository.cs",
-              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Infrastructure\\Repositories\\PetRegisterRepository.cs",
-              "RelativeDocumentMoniker": "ProjetoP2\\Register\\Infrastructure\\Repositories\\PetRegisterRepository.cs",
-              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Infrastructure\\Repositories\\PetRegisterRepository.cs",
-              "RelativeToolTip": "ProjetoP2\\Register\\Infrastructure\\Repositories\\PetRegisterRepository.cs",
+              "DocumentIndex": 2,
+              "Title": "VetClinicRepository.cs",
+              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Clinic\\Infrastructure\\Repositories\\VetClinicRepository.cs",
+              "RelativeDocumentMoniker": "ProjetoP2\\Clinic\\Infrastructure\\Repositories\\VetClinicRepository.cs",
+              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Clinic\\Infrastructure\\Repositories\\VetClinicRepository.cs",
+              "RelativeToolTip": "ProjetoP2\\Clinic\\Infrastructure\\Repositories\\VetClinicRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T06:32:21.222Z"
+              "WhenOpened": "2026-06-06T19:22:46.832Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "20260604002832_firstmigration.cs",
-              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Migrations\\20260604002832_firstmigration.cs",
-              "RelativeDocumentMoniker": "ProjetoP2\\Migrations\\20260604002832_firstmigration.cs",
-              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Migrations\\20260604002832_firstmigration.cs",
-              "RelativeToolTip": "ProjetoP2\\Migrations\\20260604002832_firstmigration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "AppointmentRegisterRepository.cs",
+              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Infrastructure\\Repositories\\AppointmentRegisterRepository.cs",
+              "RelativeDocumentMoniker": "ProjetoP2\\Register\\Infrastructure\\Repositories\\AppointmentRegisterRepository.cs",
+              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Infrastructure\\Repositories\\AppointmentRegisterRepository.cs",
+              "RelativeToolTip": "ProjetoP2\\Register\\Infrastructure\\Repositories\\AppointmentRegisterRepository.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAWwCsAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T06:24:18.774Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Context.cs",
-              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Infrastructure\\Data\\Context\\Context.cs",
-              "RelativeDocumentMoniker": "ProjetoP2\\Infrastructure\\Data\\Context\\Context.cs",
-              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Infrastructure\\Data\\Context\\Context.cs",
-              "RelativeToolTip": "ProjetoP2\\Infrastructure\\Data\\Context\\Context.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T06:33:02.668Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "IPetRegisterRepository.cs",
-              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Domain\\IRepositories\\IPetRegisterRepository.cs",
-              "RelativeDocumentMoniker": "ProjetoP2\\Register\\Domain\\IRepositories\\IPetRegisterRepository.cs",
-              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Domain\\IRepositories\\IPetRegisterRepository.cs",
-              "RelativeToolTip": "ProjetoP2\\Register\\Domain\\IRepositories\\IPetRegisterRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T06:19:52.563Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "IAppointmentRegisterRepository.cs",
-              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Domain\\IRepositories\\IAppointmentRegisterRepository.cs",
-              "RelativeDocumentMoniker": "ProjetoP2\\Register\\Domain\\IRepositories\\IAppointmentRegisterRepository.cs",
-              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Domain\\IRepositories\\IAppointmentRegisterRepository.cs",
-              "RelativeToolTip": "ProjetoP2\\Register\\Domain\\IRepositories\\IAppointmentRegisterRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T06:19:47.516Z"
+              "WhenOpened": "2026-06-06T19:22:36.264Z",
+              "EditorCaption": ""
             }
           ]
         }

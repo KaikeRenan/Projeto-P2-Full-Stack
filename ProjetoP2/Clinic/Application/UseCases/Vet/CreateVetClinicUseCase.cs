@@ -1,8 +1,8 @@
-﻿using ProjetoP2.Clinic.Application.DTOs.Appointment;
-using ProjetoP2.Clinic.Application.DTOs.Vet;
+﻿using ProjetoP2.Clinic.Application.DTOs.Vet;
 using ProjetoP2.Clinic.Domain.Entities;
 using ProjetoP2.Clinic.Domain.IRepositories;
 using ProjetoP2.Clinic.Domain.ValueObjects;
+using ProjetoP2.Shared.Exceptions;
 using ProjetoP2.Shared.ValueObjects;
 
 namespace ProjetoP2.Clinic.Application.UseCases.Vet
@@ -16,8 +16,17 @@ namespace ProjetoP2.Clinic.Application.UseCases.Vet
             this._vetRepository = vetRepository;
         }
 
-        public ResponseVetClinicDto Run(CreateVetClinicDto dto)
+        public async Task<ResponseVetClinicDto> Run(CreateVetClinicDto dto)
         {
+            if (await _vetRepository.ExistsByCpfAsync(dto.CPF))
+                throw new ExceptionDuplicateCpf();
+
+            if (await _vetRepository.ExistsByEmailAsync(dto.Email))
+                throw new ExceptionDuplicateEmail();
+
+            if (await _vetRepository.ExistsByCrmvAsync(dto.CRMV))
+                throw new ExceptionDuplicateCrmv();
+
             var vet = new VetClinic(
                 dto.FirstName,
                 dto.LastName,
@@ -27,7 +36,7 @@ namespace ProjetoP2.Clinic.Application.UseCases.Vet
                 new CRMV(dto.CRMV)
             );
 
-            _vetRepository.Create(vet);
+            await _vetRepository.CreateAsync(vet);
 
             return new ResponseVetClinicDto
             {

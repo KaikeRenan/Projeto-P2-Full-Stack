@@ -1,4 +1,4 @@
-﻿using ProjetoP2.Register.Domain.Exceptions;
+﻿using ProjetoP2.Shared.Exceptions;
 using System.Net;
 
 namespace ProjetoP2.Interface.Middlewares
@@ -32,6 +32,7 @@ namespace ProjetoP2.Interface.Middlewares
             {
                 ExceptionDuplicateCpf => (HttpStatusCode.Conflict, ex.Message),
                 ExceptionDuplicateEmail => (HttpStatusCode.Conflict, ex.Message),
+                ExceptionDuplicateCrmv => (HttpStatusCode.Conflict, ex.Message),
                 UnauthorizedAccessException => (HttpStatusCode.Unauthorized, ex.Message),
                 InvalidOperationException => (HttpStatusCode.BadRequest, ex.Message),
                 NotImplementedException => (HttpStatusCode.NotImplemented, "Recurso não implementado"),

@@ -10,7 +10,7 @@ namespace ProjetoP2.Register.Infrastructure.Repositories
     {
         private readonly Context _context;
 
-        public OwnerRegisterRepository(Context context) : base(context) 
+        public OwnerRegisterRepository(Context context) : base(context)
         {
             _context = context;
         }

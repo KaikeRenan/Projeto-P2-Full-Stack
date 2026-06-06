@@ -29,5 +29,15 @@ namespace ProjetoP2.Clinic.Domain.Entities
         }
 
         public void AddPet(AppointmentClinic pet) { Appointments.Add(pet); }
+
+        public void RemovePet(AppointmentClinic pet) { Appointments.Remove(pet); }
+
+        public void Update(string firstName, string lastName, Email email, PhoneNumber phoneNumber)
+        {
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.Email = email;
+            this.PhoneNumber = phoneNumber;
+        }
     }
 }
