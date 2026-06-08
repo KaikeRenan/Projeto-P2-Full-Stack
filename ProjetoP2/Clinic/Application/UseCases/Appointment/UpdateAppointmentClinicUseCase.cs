@@ -37,6 +37,11 @@ namespace ProjetoP2.Clinic.Application.UseCases.Appointment
             if (pet == null)
                 throw new Exception("Pet não encontrado");
 
+            var conflict = await _appointmentRepository.HasConflictAsync(dto.VetId, dto.DateAppointment, dto.Id);
+
+            if (conflict)
+                throw new Exception("Já existe uma consulta agendada para este veterinário neste horário.");
+
             appointment.Update(
                 dto.VetId,
                 dto.PetId,

@@ -1,5 +1,4 @@
-﻿using ProjetoP2.Clinic.Application.DTOs.Appointment;
-using ProjetoP2.Clinic.Domain.IRepositories;
+﻿using ProjetoP2.Clinic.Domain.IRepositories;
 using ProjetoP2.Register.Application.DTOs.AppointmentRegister;
 using ProjetoP2.Register.Domain.IRepositories;
 
@@ -37,6 +36,11 @@ namespace ProjetoP2.Register.Application.UseCases.AppointmentRegisterUseCases
 
             if (pet == null)
                 throw new Exception("Pet não encontrado");
+
+            var conflict = await _appointmentRepository.HasConflictAsync(dto.VetId, dto.DateAppointment, dto.Id);
+
+            if (conflict)
+                throw new Exception("Já existe uma consulta agendada para este veterinário neste horário.");
 
             appointment.Update(
                 dto.VetId,

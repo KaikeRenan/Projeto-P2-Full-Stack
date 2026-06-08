@@ -5,5 +5,6 @@ namespace ProjetoP2.Register.Domain.IRepositories
 {
     public interface IAppointmentRegisterRepository : IBaseRepository<AppointmentRegister>
     {
+        Task<bool> HasConflictAsync(Guid vetId, DateTime dateAppointment, Guid? appointmentId = null);
     }
 }

@@ -33,6 +33,11 @@ namespace ProjetoP2.Register.Application.UseCases.AppointmentRegisterUseCases
             if (pet == null)
                 throw new Exception("Pet não encontrado");
 
+            var conflict = await _appointmentRepository.HasConflictAsync(dto.VetId, dto.DateAppointment);
+
+            if (conflict)
+                throw new Exception("Já existe uma consulta agendada para este veterinário neste horário.");
+
             var appointment = new AppointmentRegister(
                 dto.VetId,
                 dto.PetId,

@@ -95,5 +95,14 @@ namespace ProjetoP2.Clinic.Infrastructure.Repositories
 
             return appt;
         }
+
+        public async Task<bool> HasConflictAsync(Guid vetId, DateTime dateAppointment, Guid? appointmentId = null)
+        {
+            return await _appointments.AnyAsync(
+                a => a.VetId == vetId && 
+                a.DateAppointment == dateAppointment && 
+                a.RemovedAt == null && 
+                (appointmentId == null || a.Id != appointmentId));
+        }
     }
 }
