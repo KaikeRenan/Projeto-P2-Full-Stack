@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ProjetoP2.Clinic.Domain.Entities;
 using ProjetoP2.Infrastructure.Data.Context;
 using ProjetoP2.Infrastructure.Data.Entities;
 using ProjetoP2.Register.Domain.Entities;
@@ -18,7 +19,7 @@ namespace ProjetoP2.Register.Infrastructure.Repositories
 
         public override async Task CreateAsync(AppointmentRegister entity)
         {
-            var appointment = new Appointment(entity.VetId, entity.PetId, entity.DateAppointment);
+            var appointment = new Appointment(entity.Id, entity.VetId, entity.PetId, entity.DateAppointment);
             _appointments.Add(appointment);
             _dbContext.SaveChanges();
         }
@@ -68,7 +69,11 @@ namespace ProjetoP2.Register.Infrastructure.Repositories
 
         private static AppointmentRegister MapToDomain(Appointment a)
         {
-            return new AppointmentRegister(a.VetId, a.PetId, a.DateAppointment);
+            var appt = new AppointmentRegister(a.VetId, a.PetId, a.DateAppointment);
+
+            appt.SetId(a.Id); // FORÇAR O ID DO BANCO PARA O DOMÍNIO -- EXPLICAR PARA O PROFESSOR
+
+            return appt;
         }
     }
 }

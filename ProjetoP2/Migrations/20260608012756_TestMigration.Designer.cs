@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjetoP2.Infrastructure.Data.Context;
 
@@ -11,9 +12,11 @@ using ProjetoP2.Infrastructure.Data.Context;
 namespace ProjetoP2.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20260608012756_TestMigration")]
+    partial class TestMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -79,36 +82,6 @@ namespace ProjetoP2.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("VetClinics", (string)null);
-                });
-
-            modelBuilder.Entity("ProjetoP2.Infrastructure.Data.Entities.Appointment", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("char(36)");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<DateTime>("DateAppointment")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<string>("Notes")
-                        .HasMaxLength(1000)
-                        .HasColumnType("varchar(1000)");
-
-                    b.Property<Guid>("PetId")
-                        .HasColumnType("char(36)");
-
-                    b.Property<DateTime?>("RemovedAt")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<Guid>("VetId")
-                        .HasColumnType("char(36)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Appointments", (string)null);
                 });
 
             modelBuilder.Entity("ProjetoP2.Register.Domain.Entities.AppointmentRegister", b =>

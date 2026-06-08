@@ -25,21 +25,25 @@ builder.Services.AddScoped<CreateOwnerRegisterUseCase>();
 builder.Services.AddScoped<GetByIdOwnerRegisterUseCase>();
 builder.Services.AddScoped<GetAllOwnerRegisterUseCase>();
 builder.Services.AddScoped<DeleteOwnerRegisterUseCase>();
+builder.Services.AddScoped<UpdateOwnerRegisterUseCase>();
 
 builder.Services.AddScoped<CreatePetRegisterUseCase>();
-//builder.Services.AddScoped<GetByIdPetRegisterUseCase>();
+builder.Services.AddScoped<GetByIdPetRegisterUseCase>();
 builder.Services.AddScoped<GetAllPetRegisterUseCase>();
 builder.Services.AddScoped<DeletePetRegisterUseCase>();
+builder.Services.AddScoped<UpdatePetRegisterUseCase>();
 
 builder.Services.AddScoped<CreateVetClinicUseCase>();
-//builder.Services.AddScoped<GetByIdVetClinicUseCase>();
+builder.Services.AddScoped<GetByIdVetClinicUseCase>();
 builder.Services.AddScoped<GetAllVetClinicUseCase>();
 builder.Services.AddScoped<DeleteVetClinicUseCase>();
+builder.Services.AddScoped<UpdateVetClinicUseCase>();
 
 builder.Services.AddScoped<CreateAppointmentClinicUseCase>();
-//builder.Services.AddScoped<GetByIdAppointmentClinicUseCase>();
+builder.Services.AddScoped<GetByIdAppointmentClinicUseCase>();
 builder.Services.AddScoped<GetAllAppointmentClinicUseCase>();
 builder.Services.AddScoped<DeleteAppointmentClinicUseCase>();
+builder.Services.AddScoped<UpdateAppointmentClinicUseCase>();
 
 string mySqlConnection = builder.Configuration.GetConnectionString("DefaultConnection") ?? "DefaultConnection";
 builder.Services.AddDbContext<Context>(options => options.UseMySql(mySqlConnection, ServerVersion.AutoDetect(mySqlConnection)));
@@ -54,12 +58,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-app.UseMiddleware<ExceptionMiddleware>();
+
 
 app.MapControllers();
 

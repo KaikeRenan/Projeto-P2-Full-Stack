@@ -22,11 +22,11 @@ namespace ProjetoP2.Interface.Middlewares
             }
             catch (Exception ex)
             {
-                await HandleExceptioAsync(context, ex);
+                await HandleExceptionAsync(context, ex);
             }
         }
 
-        private Task HandleExceptioAsync(HttpContext context, Exception ex)
+        private Task HandleExceptionAsync(HttpContext context, Exception ex)
         {
             var (status, message) = ex switch
             {
@@ -36,7 +36,7 @@ namespace ProjetoP2.Interface.Middlewares
                 UnauthorizedAccessException => (HttpStatusCode.Unauthorized, ex.Message),
                 InvalidOperationException => (HttpStatusCode.BadRequest, ex.Message),
                 NotImplementedException => (HttpStatusCode.NotImplemented, "Recurso não implementado"),
-                _ => (HttpStatusCode.InternalServerError, "Ocorreu um erro inesperado")
+                _ => (HttpStatusCode.InternalServerError, ex.Message)
             };
 
             if (status == HttpStatusCode.InternalServerError)

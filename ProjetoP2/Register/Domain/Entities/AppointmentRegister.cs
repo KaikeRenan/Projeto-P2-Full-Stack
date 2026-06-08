@@ -16,7 +16,10 @@ namespace ProjetoP2.Register.Domain.Entities
             PetId = petId;
             DateAppointment = dateAppointment;
         }
-
+        internal void SetId(Guid id)
+        {
+            Id = id;
+        }
         public void Reschedule(DateTime newDate) => DateAppointment = newDate;
     }
 }

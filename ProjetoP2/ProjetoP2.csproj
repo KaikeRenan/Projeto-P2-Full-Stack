@@ -36,11 +36,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Application\DTOs\" />
-    <Folder Include="Application\Interfaces\" />
-    <Folder Include="Application\Mappings\" />
-    <Folder Include="Application\UseCases\" />
-    <Folder Include="Application\Services\" />
     <Folder Include="Domain\DomainEvents\" />
     <Folder Include="Domain\IRepositories\" />
     <Folder Include="Domain\ValueObjects\" />

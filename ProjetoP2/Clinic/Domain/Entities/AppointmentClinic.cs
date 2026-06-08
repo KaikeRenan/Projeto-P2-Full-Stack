@@ -12,11 +12,17 @@ namespace ProjetoP2.Clinic.Domain.Entities
 
         protected AppointmentClinic() { }
 
-        public AppointmentClinic(Guid vetId, Guid petId, DateTime dateAppointment)
+        public AppointmentClinic(Guid vetId, Guid petId, DateTime dateAppointment, string? notes)
         {
             VetId = vetId;
             PetId = petId;
             DateAppointment = dateAppointment;
+            Notes = notes;
+        }
+
+        internal void SetId(Guid id)
+        {
+            Id = id;
         }
 
         public void ChangeVet(Guid newVetId) => VetId = newVetId;
@@ -29,11 +35,12 @@ namespace ProjetoP2.Clinic.Domain.Entities
             VetId = vet.Id;
         }
 
-        public void Update(Guid vetId, Guid petId, DateTime dateAppointment)
+        public void Update(Guid vetId, Guid petId, DateTime dateAppointment, string? notes)
         {
             VetId = vetId;
             PetId = petId;
             DateAppointment = dateAppointment;
+            Notes = notes;
         }
     }
 }

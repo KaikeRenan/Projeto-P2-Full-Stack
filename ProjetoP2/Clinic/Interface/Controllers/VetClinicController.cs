@@ -9,36 +9,57 @@ namespace ProjetoP2.Clinic.Interface.Controllers
     public class VetClinicController : ControllerBase
     {
         private readonly CreateVetClinicUseCase _createUseCase;
-        private readonly GetAllVetClinicUseCase _getUseCase;
+        private readonly GetAllVetClinicUseCase _getAllUseCase;
+        private readonly GetByIdVetClinicUseCase _getByIdUseCase;
+        private readonly UpdateVetClinicUseCase _updateUseCase;
         private readonly DeleteVetClinicUseCase _deleteUseCase;
 
         public VetClinicController(
             CreateVetClinicUseCase createUseCase,
-            GetAllVetClinicUseCase getUseCase,
+            GetAllVetClinicUseCase getAllUseCase,
+            GetByIdVetClinicUseCase getByIdUseCase,
+            UpdateVetClinicUseCase updateUseCase,
             DeleteVetClinicUseCase deleteUseCase)
         {
             _createUseCase = createUseCase;
-            _getUseCase = getUseCase;
+            _getAllUseCase = getAllUseCase;
+            _getByIdUseCase = getByIdUseCase;
+            _updateUseCase = updateUseCase;
             _deleteUseCase = deleteUseCase;
         }
 
         [HttpPost]
-        public IActionResult Create(CreateVetClinicDto dto)
+        public async Task<IActionResult> Create([FromBody] CreateVetClinicDto dto)
         {
-            var result = _createUseCase.Run(dto);
+            var result = await _createUseCase.Run(dto);
             return Ok(result);
         }
 
         [HttpGet]
-        public IActionResult Get(Guid Id)
+        public async Task<IActionResult> GetAll()
         {
-            return Ok(_getUseCase.Run());
+            var result = await _getAllUseCase.Run();
+            return Ok(result);
         }
 
-        [HttpDelete("{Id}")]
-        public IActionResult Delete(Guid Id)
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(Guid id)
         {
-            _deleteUseCase.Run(Id);
+            var result = await _getByIdUseCase.Run(id);
+            return Ok(result);
+        }
+
+        [HttpPatch]
+        public async Task<IActionResult> Update([FromBody] UpdateVetClinicDto dto)
+        {
+            var result = await _updateUseCase.Run(dto);
+            return Ok(result);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            await _deleteUseCase.Run(id);
             return NoContent();
         }
     }

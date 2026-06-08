@@ -7,16 +7,16 @@
         public Sex(string value)
         {
             if (string.IsNullOrEmpty(value))
-            {
                 throw new ArgumentException("Sexo inválido");
-            }
 
-            if (value != "Macho" && value != "Fêmea")
-            {
+            var normalized = value.Trim().ToUpper()
+                .Replace("Ê", "E")
+                .Replace("ê", "E");
+
+            if (normalized != "MACHO" && normalized != "FEMEA")
                 throw new ArgumentException("Sexo não permitido");
-            }
 
-            this.Value = value.Trim();
+            Value = value.Trim();
         }
     }
 }

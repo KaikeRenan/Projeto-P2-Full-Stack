@@ -20,7 +20,7 @@ namespace ProjetoP2.Clinic.Infrastructure.Repositories
 
         public override async Task CreateAsync(AppointmentClinic entity)
         {
-            var appointment = new Appointment(entity.VetId, entity.PetId, entity.DateAppointment, entity.Notes);
+            var appointment = new Appointment(entity.Id, entity.VetId, entity.PetId, entity.DateAppointment, entity.Notes);
             _appointments.Add(appointment);
             _dbContext.SaveChanges();
         }
@@ -83,7 +83,9 @@ namespace ProjetoP2.Clinic.Infrastructure.Repositories
 
         private static AppointmentClinic MapToDomain(Appointment a, VetClinic? vet)
         {
-            var appt = new AppointmentClinic(a.VetId, a.PetId, a.DateAppointment);
+            var appt = new AppointmentClinic(a.VetId, a.PetId, a.DateAppointment, a.Notes);
+
+            appt.SetId(a.Id); // FORÇAR O ID DO BANCO PARA O DOMÍNIO -- EXPLICAR PARA O PROFESSOR
 
             if (vet != null)
                 appt.SetVet(vet);

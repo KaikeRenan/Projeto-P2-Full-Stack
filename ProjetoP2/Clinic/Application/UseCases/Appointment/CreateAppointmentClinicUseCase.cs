@@ -36,7 +36,8 @@ namespace ProjetoP2.Clinic.Application.UseCases.Appointment
             var appointment = new AppointmentClinic(
                 dto.VetId,
                 dto.PetId,
-                dto.DateAppointment
+                dto.DateAppointment,
+                dto.Notes
             );
 
             await _appointmentRepository.CreateAsync(appointment);
@@ -46,7 +47,8 @@ namespace ProjetoP2.Clinic.Application.UseCases.Appointment
                 Id = appointment.Id,
                 VetId = appointment.VetId,
                 PetId = appointment.PetId,
-                DateAppointment = appointment.DateAppointment
+                DateAppointment = appointment.DateAppointment,
+                Notes = appointment.Notes
             };
         }
     }

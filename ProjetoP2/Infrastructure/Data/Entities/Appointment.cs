@@ -11,8 +11,9 @@ namespace ProjetoP2.Infrastructure.Data.Entities
 
         protected Appointment() { }
 
-        public Appointment(Guid vetId, Guid petId, DateTime dateAppointment, string? notes = null)
+        public Appointment(Guid? id,Guid vetId, Guid petId, DateTime dateAppointment, string? notes = null)
         {
+            if (id.HasValue) base.Id = id.Value;
             VetId = vetId;
             PetId = petId;
             DateAppointment = dateAppointment;
