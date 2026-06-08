@@ -37,6 +37,8 @@ namespace ProjetoP2.Register.Application.UseCases.AppointmentRegisterUseCases
             if (pet == null)
                 throw new Exception("Pet não encontrado");
 
+            // impedir consultas em horários conflitantes
+
             var conflict = await _appointmentRepository.HasConflictAsync(dto.VetId, dto.DateAppointment, dto.Id);
 
             if (conflict)

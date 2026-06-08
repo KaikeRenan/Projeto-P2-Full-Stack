@@ -75,6 +75,7 @@ namespace ProjetoP2.Register.Infrastructure.Repositories
             return appt;
         }
 
+        // impedir consultas em horários conflitantes
         public async Task<bool> HasConflictAsync(Guid vetId, DateTime dateAppointment, Guid? appointmentId = null)
         {
             return await _appointments.AnyAsync(
@@ -82,6 +83,15 @@ namespace ProjetoP2.Register.Infrastructure.Repositories
                 a.DateAppointment == dateAppointment &&
                 a.RemovedAt == null &&
                 (appointmentId == null || a.Id != appointmentId));
+        }
+
+        // impedir exclusão de pets com consultas futuras
+        public async Task<bool> HasFutureAppointmentsAsync(Guid petId)
+        {
+            return await _appointments.AnyAsync(
+                a => a.PetId == petId &&
+                a.DateAppointment > DateTime.UtcNow &&
+                a.RemovedAt == null);
         }
     }
 }
