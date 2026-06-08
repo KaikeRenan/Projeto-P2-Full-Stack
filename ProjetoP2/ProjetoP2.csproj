@@ -8,15 +8,43 @@
 
   <ItemGroup>
     <Compile Remove="Clinic\Infrastructure\Data\**" />
+    <Compile Remove="Infrastructure\Auth\**" />
+    <Compile Remove="Infrastructure\CrossCutting\**" />
+    <Compile Remove="Infrastructure\Messaging\**" />
+    <Compile Remove="Infrastructure\Observability\**" />
+    <Compile Remove="Infrastructure\Repositories\**" />
+    <Compile Remove="Interface\Controllers\**" />
+    <Compile Remove="Interface\Filters\**" />
    
     <Compile Remove="Shared\Data\**" />
     <Content Remove="Clinic\Infrastructure\Data\**" />
+    <Content Remove="Infrastructure\Auth\**" />
+    <Content Remove="Infrastructure\CrossCutting\**" />
+    <Content Remove="Infrastructure\Messaging\**" />
+    <Content Remove="Infrastructure\Observability\**" />
+    <Content Remove="Infrastructure\Repositories\**" />
+    <Content Remove="Interface\Controllers\**" />
+    <Content Remove="Interface\Filters\**" />
 
     <Content Remove="Shared\Data\**" />
     <EmbeddedResource Remove="Clinic\Infrastructure\Data\**" />
+    <EmbeddedResource Remove="Infrastructure\Auth\**" />
+    <EmbeddedResource Remove="Infrastructure\CrossCutting\**" />
+    <EmbeddedResource Remove="Infrastructure\Messaging\**" />
+    <EmbeddedResource Remove="Infrastructure\Observability\**" />
+    <EmbeddedResource Remove="Infrastructure\Repositories\**" />
+    <EmbeddedResource Remove="Interface\Controllers\**" />
+    <EmbeddedResource Remove="Interface\Filters\**" />
 
     <EmbeddedResource Remove="Shared\Data\**" />
     <None Remove="Clinic\Infrastructure\Data\**" />
+    <None Remove="Infrastructure\Auth\**" />
+    <None Remove="Infrastructure\CrossCutting\**" />
+    <None Remove="Infrastructure\Messaging\**" />
+    <None Remove="Infrastructure\Observability\**" />
+    <None Remove="Infrastructure\Repositories\**" />
+    <None Remove="Interface\Controllers\**" />
+    <None Remove="Interface\Filters\**" />
 
     <None Remove="Shared\Data\**" />
   </ItemGroup>
@@ -36,22 +64,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Domain\DomainEvents\" />
-    <Folder Include="Domain\IRepositories\" />
-    <Folder Include="Domain\ValueObjects\" />
-    <Folder Include="Infrastructure\CrossCutting\IoC\" />
-    <Folder Include="Infrastructure\CrossCutting\Logging\" />
-    <Folder Include="Infrastructure\CrossCutting\Exceptions\" />
-    <Folder Include="Infrastructure\Auth\" />
-    <Folder Include="Infrastructure\Messaging\Consumers\" />
-    <Folder Include="Infrastructure\Messaging\Events\" />
-    <Folder Include="Infrastructure\Messaging\Producers\" />
-    <Folder Include="Infrastructure\Observability\" />
-    <Folder Include="Infrastructure\Repositories\" />
-    <Folder Include="Interface\Controllers\" />
-    <Folder Include="Interface\Filters\" />
     <Folder Include="Migrations\" />
-    <Folder Include="Register\Domain\Exceptions\" />
   </ItemGroup>
 
 </Project>

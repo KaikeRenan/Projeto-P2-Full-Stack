@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ProjetoP2.Clinic.Domain.Entities;
 using ProjetoP2.Infrastructure.Data.Context;
 using ProjetoP2.Infrastructure.Data.Entities;
 using ProjetoP2.Register.Domain.Entities;

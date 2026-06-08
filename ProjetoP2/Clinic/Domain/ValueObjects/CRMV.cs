@@ -1,7 +1,4 @@
-﻿using ProjetoP2.Register.Domain.ValueObjects;
-using System.Text.RegularExpressions;
-
-namespace ProjetoP2.Clinic.Domain.ValueObjects
+﻿namespace ProjetoP2.Clinic.Domain.ValueObjects
 {
     public class CRMV
     {

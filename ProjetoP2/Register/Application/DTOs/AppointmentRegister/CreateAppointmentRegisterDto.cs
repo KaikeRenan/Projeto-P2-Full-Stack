@@ -1,10 +1,9 @@
-﻿namespace ProjetoP2.Clinic.Application.DTOs.Appointment
+﻿namespace ProjetoP2.Register.Application.DTOs.AppointmentRegister
 {
-    public class CreateAppointmentClinicDto
+    public class CreateAppointmentRegisterDto
     {
         public Guid VetId { get; set; }
         public Guid PetId { get; set; }
         public DateTime DateAppointment { get; set; }
-        public string? Notes { get; set; }
     }
 }

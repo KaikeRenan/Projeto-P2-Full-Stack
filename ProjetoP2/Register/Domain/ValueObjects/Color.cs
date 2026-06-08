@@ -1,7 +1,4 @@
-﻿using System.Drawing;
-using System.Net.NetworkInformation;
-
-namespace ProjetoP2.Register.Domain.ValueObjects
+﻿namespace ProjetoP2.Register.Domain.ValueObjects
 {
     public class Color
     {

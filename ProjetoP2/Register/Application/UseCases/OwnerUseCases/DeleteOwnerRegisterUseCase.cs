@@ -8,7 +8,7 @@ namespace ProjetoP2.Register.Application.UseCases.OwnerUseCases
 
         public DeleteOwnerRegisterUseCase(IOwnerRegisterRepository owerRepository)
         {
-            _owerRepository = owerRepository;
+            this._owerRepository = owerRepository;
         }
 
         public async Task Run(Guid Id) 

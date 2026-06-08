@@ -9,7 +9,7 @@ namespace ProjetoP2.Register.Application.UseCases.OwnerUseCases
 
         public GetByIdOwnerRegisterUseCase(IOwnerRegisterRepository owerRepository)
         {
-            _ownerRepository = owerRepository;
+            this._ownerRepository = owerRepository;
         }
 
         public async Task<ResponseOwnerRegisterDto> Run(Guid Id)

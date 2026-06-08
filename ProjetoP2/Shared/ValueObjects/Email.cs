@@ -7,7 +7,6 @@
         public Email(string value)
         {
             if (string.IsNullOrEmpty(value) || !value.Contains("@"))
-            // if (!value.Contains("@") || !value.Contains("."))
             {
                 throw new ArgumentException("Email com formato inválido");
             }

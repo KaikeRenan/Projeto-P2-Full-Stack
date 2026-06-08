@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\dev\\Projeto-P2-Full-Stack\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\register\\infrastructure\\repositories\\appointmentregisterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\register\\infrastructure\\repositories\\appointmentregisterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\clinic\\infrastructure\\repositories\\appointmentclinicrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\clinic\\infrastructure\\repositories\\appointmentclinicrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\clinic\\infrastructure\\repositories\\vetclinicrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\clinic\\infrastructure\\repositories\\vetclinicrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|c:\\dev\\projeto-p2-full-stack\\projetop2\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1C8236DB-C1C9-6ABD-0CE5-44DD8122AA07}|ProjetoP2\\ProjetoP2.csproj|solutionrelative:projetop2\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,41 +26,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AppointmentClinicRepository.cs",
-              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Clinic\\Infrastructure\\Repositories\\AppointmentClinicRepository.cs",
-              "RelativeDocumentMoniker": "ProjetoP2\\Clinic\\Infrastructure\\Repositories\\AppointmentClinicRepository.cs",
-              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Clinic\\Infrastructure\\Repositories\\AppointmentClinicRepository.cs",
-              "RelativeToolTip": "ProjetoP2\\Clinic\\Infrastructure\\Repositories\\AppointmentClinicRepository.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAAwFEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-06T19:22:49.474Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "VetClinicRepository.cs",
-              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Clinic\\Infrastructure\\Repositories\\VetClinicRepository.cs",
-              "RelativeDocumentMoniker": "ProjetoP2\\Clinic\\Infrastructure\\Repositories\\VetClinicRepository.cs",
-              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Clinic\\Infrastructure\\Repositories\\VetClinicRepository.cs",
-              "RelativeToolTip": "ProjetoP2\\Clinic\\Infrastructure\\Repositories\\VetClinicRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-06T19:22:46.832Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AppointmentRegisterRepository.cs",
-              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Infrastructure\\Repositories\\AppointmentRegisterRepository.cs",
-              "RelativeDocumentMoniker": "ProjetoP2\\Register\\Infrastructure\\Repositories\\AppointmentRegisterRepository.cs",
-              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Register\\Infrastructure\\Repositories\\AppointmentRegisterRepository.cs",
-              "RelativeToolTip": "ProjetoP2\\Register\\Infrastructure\\Repositories\\AppointmentRegisterRepository.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAWwCsAAAAuAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Program.cs",
+              "RelativeDocumentMoniker": "ProjetoP2\\Program.cs",
+              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\Program.cs",
+              "RelativeToolTip": "ProjetoP2\\Program.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAArwCYAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-06T19:22:36.264Z",
+              "WhenOpened": "2026-06-08T04:39:07.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "ProjetoP2\\appsettings.Development.json",
+              "ToolTip": "C:\\dev\\Projeto-P2-Full-Stack\\ProjetoP2\\appsettings.Development.json",
+              "RelativeToolTip": "ProjetoP2\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-08T04:39:01.544Z",
               "EditorCaption": ""
             }
           ]

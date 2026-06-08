@@ -5,6 +5,7 @@ using ProjetoP2.Clinic.Domain.IRepositories;
 using ProjetoP2.Clinic.Infrastructure.Repositories;
 using ProjetoP2.Infrastructure.Data.Context;
 using ProjetoP2.Interface.Middlewares;
+using ProjetoP2.Register.Application.UseCases.AppointmentRegisterUseCases;
 using ProjetoP2.Register.Application.UseCases.OwnerUseCases;
 using ProjetoP2.Register.Application.UseCases.PetUseCases;
 using ProjetoP2.Register.Domain.IRepositories;
@@ -32,6 +33,12 @@ builder.Services.AddScoped<GetByIdPetRegisterUseCase>();
 builder.Services.AddScoped<GetAllPetRegisterUseCase>();
 builder.Services.AddScoped<DeletePetRegisterUseCase>();
 builder.Services.AddScoped<UpdatePetRegisterUseCase>();
+
+builder.Services.AddScoped<CreateAppointmentRegisterUseCase>();
+builder.Services.AddScoped<GetByIdAppointmentRegisterUseCase>();
+builder.Services.AddScoped<GetAllAppointmentRegisterUseCase>();
+builder.Services.AddScoped<DeleteAppointmentRegisterUseCase>();
+builder.Services.AddScoped<UpdateAppointmentRegisterUseCase>();
 
 builder.Services.AddScoped<CreateVetClinicUseCase>();
 builder.Services.AddScoped<GetByIdVetClinicUseCase>();

@@ -1,6 +1,4 @@
-﻿using ProjetoP2.Shared.ValueObjects;
-
-namespace ProjetoP2.Register.Application.DTOs.Owner
+﻿namespace ProjetoP2.Register.Application.DTOs.Owner
 {
     public class CreateOwnerRegisterDto
     {
