@@ -247,24 +247,6 @@ para a porta utilizada pelo Vite.
 
 ---
 
-#  Status do Frontend
-
-## Work In Progress (WIP)
-
-O frontend ainda está em desenvolvimento e não representa a versão final da aplicação.
-
-Atualmente existem problemas conhecidos relacionados à integração com o backend, incluindo:
-
-* Endpoints ainda não totalmente conectados.
-* Inconsistências na comunicação entre API e interface.
-* Tratamento incompleto de erros de requisição.
-* Algumas telas ainda em construção.
-* Fluxos de cadastro e consulta podem não refletir integralmente o comportamento esperado da API.
-
-Portanto, para fins de avaliação e testes, recomenda-se utilizar principalmente a documentação Swagger da API para validação das funcionalidades do sistema.
-
----
-
 #  Melhorias Futuras
 
 * Correção completa da integração frontend/backend.
