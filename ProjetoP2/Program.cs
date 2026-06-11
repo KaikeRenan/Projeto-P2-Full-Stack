@@ -13,6 +13,8 @@ using ProjetoP2.Register.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(o => o.AddPolicy("frontend", p => p.WithOrigins("http://localhost:5173").AllowAnyHeader().AllowAnyMethod()));
+
 builder.Services.AddControllers();
 
 builder.Services.AddScoped<IOwnerRegisterRepository, OwnerRegisterRepository>();
@@ -65,13 +67,14 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseHttpsRedirection();
 
+app.UseCors("frontend");
+
 app.UseAuthorization();
-
-
 
 app.MapControllers();
 

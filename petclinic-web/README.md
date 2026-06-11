@@ -1,73 +1,50 @@
-# React + TypeScript + Vite
+# PetCare — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend React + TypeScript + Tailwind para o backend ProjetoP2 (.NET).
 
-Currently, two official plugins are available:
+## Como rodar
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Abre em `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Pré-requisitos no backend (.NET)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Confirme que a API roda em `http://localhost:5241` (perfil "http" do `launchSettings.json`).
+   Se usar outra porta, ajuste `src/api/client.ts`.
+
+2. Adicione `5173` ao CORS e ative `UseCors` no `Program.cs`:
+
+```csharp
+builder.Services.AddCors(o => o.AddPolicy("frontend", p => p
+    .WithOrigins("http://localhost:5173")
+    .AllowAnyHeader()
+    .AllowAnyMethod()));
+
+// ...
+
+app.UseHttpsRedirection();
+app.UseCors("frontend");   // <- adicionar antes de UseAuthorization
+app.UseAuthorization();
+app.MapControllers();
 ```
+
+## Estrutura
+
+- `src/api/` — cliente axios + funções por recurso (Owner, Pet, Vet, AppointmentRegister, AppointmentClinic)
+- `src/types.ts` — tipos espelhando os DTOs do backend + constantes derivadas dos Value Objects (Color, Sex, UF)
+- `src/hooks/useResource.ts` — hook genérico de CRUD com toast e refetch
+- `src/components/` — Layout (sidebar responsiva), Modal, formulários, estados (loading/erro/vazio)
+- `src/pages/` — uma página por entidade
+
+## Regras de domínio refletidas no frontend
+
+- `sex`: select com "Macho" / "Fêmea" (Sex.cs)
+- `color`: select com as 12 opções exatas aceitas por Color.cs
+- `crmv`: validado no formato `12345-UF` (CRMV.cs)
+- `microchippedNumber`: só aparece se "Microchipado" estiver marcado, limitado ao Int32 (2.147.483.647)
+- `petRG`: mínimo 15 caracteres, exige `ownerId` preenchido (regra do construtor de PetRegister)
+- Edição de Owner não permite alterar CPF (UpdateOwnerRegisterDto não possui esse campo)

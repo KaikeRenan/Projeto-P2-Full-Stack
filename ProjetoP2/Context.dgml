@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+<Node Id="IModel" Label="Context" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" PropertyAccessMode="PropertyAccessMode.Default" ProductVersion="9.0.16" Annotations="BaseTypeDiscoveryConvention:DerivedTypes: System.Collections.Generic.Dictionary`2[System.Type,System.Collections.Generic.List`1[Microsoft.EntityFrameworkCore.Metadata.IConventionEntityType]]
+InversePropertyAttributeConvention:InverseNavigations: System.Collections.Generic.Dictionary`2[System.Type,System.Collections.Generic.SortedSet`1[System.Type]]
+MySql:ValueGenerationStrategy: IdentityColumn
+NonNullableConventionState: System.Reflection.NullabilityInfoContext
+Relational:MaxIdentifierLength: 64" Category="Model" Group="Expanded" />
+<Node Id = "AppointmentClinic" Label="AppointmentClinic" Name="AppointmentClinic" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="QueryFilter: a =&gt; (a.RemovedAt == null)
+Relational:Schema:
+Relational:TableName: AppointmentClinics
+RelationshipDiscoveryConvention:NavigationCandidates: Microsoft.EntityFrameworkCore.Utilities.OrderedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "VetClinic" Label="VetClinic" Name="VetClinic" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="ComplexPropertyDiscoveryConvention:ComplexCandidates: System.Collections.Generic.Dictionary`2[System.String,System.Reflection.MemberInfo]
+QueryFilter: v =&gt; (v.RemovedAt == null)
+Relational:Schema:
+Relational:TableName: VetClinics
+RelationshipDiscoveryConvention:NavigationCandidates: Microsoft.EntityFrameworkCore.Utilities.OrderedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "AppointmentClinic.Id" Label="Id (Guid)" Name="Id" Category="Property Primary" Type="Guid" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="True" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "AppointmentClinic.Vet" Label="Vet (1)" Name="Vet" Category="Navigation Property" Type="VetClinic"  Field="" Dependent="" Principal="VetClinic" Inverse="Appointments" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "AppointmentClinic.CreatedAt" Label="CreatedAt (DateTime)" Name="CreatedAt" Category="Property Required" Type="DateTime" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "AppointmentClinic.DateAppointment" Label="DateAppointment (DateTime)" Name="DateAppointment" Category="Property Required" Type="DateTime" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "AppointmentClinic.Notes" Label="Notes (string)" Name="Notes" Category="Property Optional" Type="string" MaxLength="(1000)" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 1000" IsPrimaryKey="False" IsForeignKey="False" IsRequired="False" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "AppointmentClinic.PetId" Label="PetId (Guid)" Name="PetId" Category="Property Required" Type="Guid" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "AppointmentClinic.RemovedAt" Label="RemovedAt (DateTime?)" Name="RemovedAt" Category="Property Optional" Type="DateTime?" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="False" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "AppointmentClinic.VetId" Label="VetId (Guid)" Name="VetId" Category="Property Foreign" Type="Guid" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="True" IsRequired="True" IsIndexed="True" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "VetClinic.CPF#CPF" Label="VetClinic.CPF#CPF" Name="VetClinic.CPF#CPF" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="RelationshipDiscoveryConvention:NavigationCandidates: Microsoft.EntityFrameworkCore.Utilities.OrderedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "VetClinic.Id" Label="Id (Guid)" Name="Id" Category="Property Primary" Type="Guid" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="True" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "VetClinic.Appointments" Label="Appointments (*)" Name="Appointments" Category="Navigation Collection" Type="ICollection&lt;AppointmentClinic&gt;"  Field="" Dependent="AppointmentClinic" Principal="" Inverse="Vet" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "VetClinic.CPF" Label="CPF (1)" Name="CPF" Category="Navigation Property" Type="CPF"  Field="" Dependent="VetClinic.CPF#CPF" Principal="" Inverse="" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "VetClinic.CRMV" Label="CRMV (1)" Name="CRMV" Category="Navigation Property" Type="CRMV"  Field="" Dependent="CRMV" Principal="" Inverse="" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "VetClinic.Email" Label="Email (1)" Name="Email" Category="Navigation Property" Type="Email"  Field="" Dependent="VetClinic.Email#Email" Principal="" Inverse="" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "VetClinic.PhoneNumber" Label="PhoneNumber (1)" Name="PhoneNumber" Category="Navigation Property" Type="PhoneNumber"  Field="" Dependent="VetClinic.PhoneNumber#PhoneNumber" Principal="" Inverse="" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "VetClinic.CreatedAt" Label="CreatedAt (DateTime)" Name="CreatedAt" Category="Property Required" Type="DateTime" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "VetClinic.FirstName" Label="FirstName (string)" Name="FirstName" Category="Property Required" Type="string" MaxLength="(100)" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 100" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "VetClinic.LastName" Label="LastName (string)" Name="LastName" Category="Property Required" Type="string" MaxLength="(100)" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 100" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "VetClinic.RemovedAt" Label="RemovedAt (DateTime?)" Name="RemovedAt" Category="Property Optional" Type="DateTime?" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="False" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "VetClinic.Email#Email" Label="VetClinic.Email#Email" Name="VetClinic.Email#Email" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="RelationshipDiscoveryConvention:NavigationCandidates: Microsoft.EntityFrameworkCore.Utilities.OrderedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "VetClinic.CPF#CPF.VetClinicId" Label="VetClinicId (Guid)" Name="VetClinicId" Category="Property Primary" Type="Guid" MaxLength="None" Field="nofield" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="True" IsForeignKey="True" IsRequired="True" IsIndexed="False" IsShadow="True" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "VetClinic.CPF#CPF.Value" Label="Value (string)" Name="Value" Category="Property Required" Type="string" MaxLength="(11)" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 11
+Relational:ColumnName: CPF" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="True" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "VetClinic.PhoneNumber#PhoneNumber" Label="VetClinic.PhoneNumber#PhoneNumber" Name="VetClinic.PhoneNumber#PhoneNumber" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="RelationshipDiscoveryConvention:NavigationCandidates: Microsoft.EntityFrameworkCore.Utilities.OrderedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "VetClinic.Email#Email.VetClinicId" Label="VetClinicId (Guid)" Name="VetClinicId" Category="Property Primary" Type="Guid" MaxLength="None" Field="nofield" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="True" IsForeignKey="True" IsRequired="True" IsIndexed="False" IsShadow="True" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "VetClinic.Email#Email.Value" Label="Value (string)" Name="Value" Category="Property Required" Type="string" MaxLength="(254)" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 254
+Relational:ColumnName: Email" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="True" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "CRMV" Label="CRMV" Name="CRMV" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="RelationshipDiscoveryConvention:NavigationCandidates: Microsoft.EntityFrameworkCore.Utilities.OrderedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "VetClinic.PhoneNumber#PhoneNumber.VetClinicId" Label="VetClinicId (Guid)" Name="VetClinicId" Category="Property Primary" Type="Guid" MaxLength="None" Field="nofield" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="True" IsForeignKey="True" IsRequired="True" IsIndexed="False" IsShadow="True" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "VetClinic.PhoneNumber#PhoneNumber.Value" Label="Value (string)" Name="Value" Category="Property Required" Type="string" MaxLength="(20)" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 20
+Relational:ColumnName: PhoneNumber" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Appointment" Label="Appointment" Name="Appointment" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="QueryFilter: a =&gt; (a.RemovedAt == null)
+Relational:Schema:
+Relational:TableName: Appointments
+RelationshipDiscoveryConvention:NavigationCandidates: Microsoft.EntityFrameworkCore.Utilities.OrderedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "CRMV.VetClinicId" Label="VetClinicId (Guid)" Name="VetClinicId" Category="Property Primary" Type="Guid" MaxLength="None" Field="nofield" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="True" IsForeignKey="True" IsRequired="True" IsIndexed="False" IsShadow="True" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "CRMV.Value" Label="Value (string)" Name="Value" Category="Property Required" Type="string" MaxLength="(20)" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 20
+Relational:ColumnName: CRMV" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="True" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "AppointmentRegister" Label="AppointmentRegister" Name="AppointmentRegister" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="QueryFilter: a =&gt; (a.RemovedAt == null)
+Relational:Schema:
+Relational:TableName: AppointmentRegisters
+RelationshipDiscoveryConvention:NavigationCandidates: Microsoft.EntityFrameworkCore.Utilities.OrderedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "Appointment.Id" Label="Id (Guid)" Name="Id" Category="Property Primary" Type="Guid" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="True" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "Appointment.CreatedAt" Label="CreatedAt (DateTime)" Name="CreatedAt" Category="Property Required" Type="DateTime" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Appointment.DateAppointment" Label="DateAppointment (DateTime)" Name="DateAppointment" Category="Property Required" Type="DateTime" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Appointment.Notes" Label="Notes (string)" Name="Notes" Category="Property Optional" Type="string" MaxLength="(1000)" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 1000" IsPrimaryKey="False" IsForeignKey="False" IsRequired="False" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Appointment.PetId" Label="PetId (Guid)" Name="PetId" Category="Property Required" Type="Guid" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Appointment.RemovedAt" Label="RemovedAt (DateTime?)" Name="RemovedAt" Category="Property Optional" Type="DateTime?" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="False" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Appointment.VetId" Label="VetId (Guid)" Name="VetId" Category="Property Required" Type="Guid" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "OwnerRegister" Label="OwnerRegister" Name="OwnerRegister" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="QueryFilter: o =&gt; (o.RemovedAt == null)
+Relational:Schema:
+Relational:TableName: OwnerRegisters
+RelationshipDiscoveryConvention:NavigationCandidates: Microsoft.EntityFrameworkCore.Utilities.OrderedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "AppointmentRegister.Id" Label="Id (Guid)" Name="Id" Category="Property Primary" Type="Guid" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="True" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "AppointmentRegister.CreatedAt" Label="CreatedAt (DateTime)" Name="CreatedAt" Category="Property Required" Type="DateTime" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "AppointmentRegister.DateAppointment" Label="DateAppointment (DateTime)" Name="DateAppointment" Category="Property Required" Type="DateTime" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "AppointmentRegister.PetId" Label="PetId (Guid)" Name="PetId" Category="Property Required" Type="Guid" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "AppointmentRegister.RemovedAt" Label="RemovedAt (DateTime?)" Name="RemovedAt" Category="Property Optional" Type="DateTime?" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="False" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "AppointmentRegister.VetId" Label="VetId (Guid)" Name="VetId" Category="Property Required" Type="Guid" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "OwnerRegister.CPF#CPF" Label="OwnerRegister.CPF#CPF" Name="OwnerRegister.CPF#CPF" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="RelationshipDiscoveryConvention:NavigationCandidates: Microsoft.EntityFrameworkCore.Utilities.OrderedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "OwnerRegister.Id" Label="Id (Guid)" Name="Id" Category="Property Primary" Type="Guid" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="True" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "OwnerRegister.CPF" Label="CPF (1)" Name="CPF" Category="Navigation Property" Type="CPF"  Field="" Dependent="OwnerRegister.CPF#CPF" Principal="" Inverse="" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "OwnerRegister.Email" Label="Email (1)" Name="Email" Category="Navigation Property" Type="Email"  Field="" Dependent="OwnerRegister.Email#Email" Principal="" Inverse="" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "OwnerRegister.Pets" Label="Pets (*)" Name="Pets" Category="Navigation Collection" Type="ICollection&lt;PetRegister&gt;"  Field="" Dependent="PetRegister" Principal="" Inverse="Owner" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "OwnerRegister.PhoneNumber" Label="PhoneNumber (1)" Name="PhoneNumber" Category="Navigation Property" Type="PhoneNumber"  Field="" Dependent="OwnerRegister.PhoneNumber#PhoneNumber" Principal="" Inverse="" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "OwnerRegister.CreatedAt" Label="CreatedAt (DateTime)" Name="CreatedAt" Category="Property Required" Type="DateTime" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "OwnerRegister.FirstName" Label="FirstName (string)" Name="FirstName" Category="Property Required" Type="string" MaxLength="(100)" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 100" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "OwnerRegister.LastName" Label="LastName (string)" Name="LastName" Category="Property Required" Type="string" MaxLength="(100)" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 100" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "OwnerRegister.RemovedAt" Label="RemovedAt (DateTime?)" Name="RemovedAt" Category="Property Optional" Type="DateTime?" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="False" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "OwnerRegister.Email#Email" Label="OwnerRegister.Email#Email" Name="OwnerRegister.Email#Email" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="RelationshipDiscoveryConvention:NavigationCandidates: Microsoft.EntityFrameworkCore.Utilities.OrderedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "OwnerRegister.CPF#CPF.OwnerRegisterId" Label="OwnerRegisterId (Guid)" Name="OwnerRegisterId" Category="Property Primary" Type="Guid" MaxLength="None" Field="nofield" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="True" IsForeignKey="True" IsRequired="True" IsIndexed="False" IsShadow="True" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "OwnerRegister.CPF#CPF.Value" Label="Value (string)" Name="Value" Category="Property Required" Type="string" MaxLength="(11)" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 11
+Relational:ColumnName: CPF" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="True" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "OwnerRegister.PhoneNumber#PhoneNumber" Label="OwnerRegister.PhoneNumber#PhoneNumber" Name="OwnerRegister.PhoneNumber#PhoneNumber" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="RelationshipDiscoveryConvention:NavigationCandidates: Microsoft.EntityFrameworkCore.Utilities.OrderedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "OwnerRegister.Email#Email.OwnerRegisterId" Label="OwnerRegisterId (Guid)" Name="OwnerRegisterId" Category="Property Primary" Type="Guid" MaxLength="None" Field="nofield" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="True" IsForeignKey="True" IsRequired="True" IsIndexed="False" IsShadow="True" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "OwnerRegister.Email#Email.Value" Label="Value (string)" Name="Value" Category="Property Required" Type="string" MaxLength="(254)" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 254
+Relational:ColumnName: Email" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="True" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "PetRegister" Label="PetRegister" Name="PetRegister" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="QueryFilter: p =&gt; (p.RemovedAt == null)
+Relational:Schema:
+Relational:TableName: PetRegisters
+RelationshipDiscoveryConvention:NavigationCandidates: Microsoft.EntityFrameworkCore.Utilities.OrderedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "OwnerRegister.PhoneNumber#PhoneNumber.OwnerRegisterId" Label="OwnerRegisterId (Guid)" Name="OwnerRegisterId" Category="Property Primary" Type="Guid" MaxLength="None" Field="nofield" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="True" IsForeignKey="True" IsRequired="True" IsIndexed="False" IsShadow="True" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "OwnerRegister.PhoneNumber#PhoneNumber.Value" Label="Value (string)" Name="Value" Category="Property Required" Type="string" MaxLength="(20)" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 20
+Relational:ColumnName: PhoneNumber" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "City" Label="City" Name="City" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="RelationshipDiscoveryConvention:NavigationCandidates: Microsoft.EntityFrameworkCore.Utilities.OrderedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "PetRegister.Id" Label="Id (Guid)" Name="Id" Category="Property Primary" Type="Guid" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="True" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "PetRegister.City" Label="City (1)" Name="City" Category="Navigation Property" Type="City"  Field="" Dependent="City" Principal="" Inverse="" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "PetRegister.Color" Label="Color (1)" Name="Color" Category="Navigation Property" Type="Color"  Field="" Dependent="Color" Principal="" Inverse="" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "PetRegister.Owner" Label="Owner (1)" Name="Owner" Category="Navigation Property" Type="OwnerRegister"  Field="" Dependent="" Principal="OwnerRegister" Inverse="Pets" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "PetRegister.PetRG" Label="PetRG (1)" Name="PetRG" Category="Navigation Property" Type="PetRG"  Field="" Dependent="PetRG" Principal="" Inverse="" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "PetRegister.Sex" Label="Sex (1)" Name="Sex" Category="Navigation Property" Type="Sex"  Field="" Dependent="Sex" Principal="" Inverse="" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "PetRegister.Specie" Label="Specie (1)" Name="Specie" Category="Navigation Property" Type="Specie"  Field="" Dependent="Specie" Principal="" Inverse="" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "PetRegister.State" Label="State (1)" Name="State" Category="Navigation Property" Type="State"  Field="" Dependent="State" Principal="" Inverse="" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "PetRegister.BirthDate" Label="BirthDate (DateTime)" Name="BirthDate" Category="Property Required" Type="DateTime" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "PetRegister.Castrated" Label="Castrated (bool)" Name="Castrated" Category="Property Required" Type="bool" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "PetRegister.Community" Label="Community (bool)" Name="Community" Category="Property Required" Type="bool" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "PetRegister.CreatedAt" Label="CreatedAt (DateTime)" Name="CreatedAt" Category="Property Required" Type="DateTime" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "PetRegister.Microchipped" Label="Microchipped (bool)" Name="Microchipped" Category="Property Required" Type="bool" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "PetRegister.MicrochippedNumber" Label="MicrochippedNumber (int?)" Name="MicrochippedNumber" Category="Property Optional" Type="int?" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="False" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "PetRegister.Name" Label="Name (string)" Name="Name" Category="Property Required" Type="string" MaxLength="(100)" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 100" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "PetRegister.OwnerId" Label="OwnerId (Guid?)" Name="OwnerId" Category="Property Foreign" Type="Guid?" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="True" IsRequired="False" IsIndexed="True" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "PetRegister.PhotoURL" Label="PhotoURL (string)" Name="PhotoURL" Category="Property Optional" Type="string" MaxLength="(2048)" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 2048" IsPrimaryKey="False" IsForeignKey="False" IsRequired="False" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "PetRegister.RemovedAt" Label="RemovedAt (DateTime?)" Name="RemovedAt" Category="Property Optional" Type="DateTime?" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="False" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Color" Label="Color" Name="Color" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="RelationshipDiscoveryConvention:NavigationCandidates: Microsoft.EntityFrameworkCore.Utilities.OrderedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "City.PetRegisterId" Label="PetRegisterId (Guid)" Name="PetRegisterId" Category="Property Primary" Type="Guid" MaxLength="None" Field="nofield" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="True" IsForeignKey="True" IsRequired="True" IsIndexed="False" IsShadow="True" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "City.Value" Label="Value (string)" Name="Value" Category="Property Required" Type="string" MaxLength="(100)" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 100
+Relational:ColumnName: City" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Sex" Label="Sex" Name="Sex" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="RelationshipDiscoveryConvention:NavigationCandidates: Microsoft.EntityFrameworkCore.Utilities.OrderedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "Color.PetRegisterId" Label="PetRegisterId (Guid)" Name="PetRegisterId" Category="Property Primary" Type="Guid" MaxLength="None" Field="nofield" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="True" IsForeignKey="True" IsRequired="True" IsIndexed="False" IsShadow="True" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Color.Value" Label="Value (string)" Name="Value" Category="Property Required" Type="string" MaxLength="(50)" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 50
+Relational:ColumnName: Color" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Specie" Label="Specie" Name="Specie" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="RelationshipDiscoveryConvention:NavigationCandidates: Microsoft.EntityFrameworkCore.Utilities.OrderedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "Sex.PetRegisterId" Label="PetRegisterId (Guid)" Name="PetRegisterId" Category="Property Primary" Type="Guid" MaxLength="None" Field="nofield" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="True" IsForeignKey="True" IsRequired="True" IsIndexed="False" IsShadow="True" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Sex.Value" Label="Value (string)" Name="Value" Category="Property Required" Type="string" MaxLength="(20)" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 20
+Relational:ColumnName: Sex" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "State" Label="State" Name="State" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="RelationshipDiscoveryConvention:NavigationCandidates: Microsoft.EntityFrameworkCore.Utilities.OrderedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "Specie.PetRegisterId" Label="PetRegisterId (Guid)" Name="PetRegisterId" Category="Property Primary" Type="Guid" MaxLength="None" Field="nofield" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="True" IsForeignKey="True" IsRequired="True" IsIndexed="False" IsShadow="True" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Specie.Value" Label="Value (string)" Name="Value" Category="Property Required" Type="string" MaxLength="(50)" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 50
+Relational:ColumnName: Specie" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "PetRG" Label="PetRG" Name="PetRG" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="RelationshipDiscoveryConvention:NavigationCandidates: Microsoft.EntityFrameworkCore.Utilities.OrderedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "State.PetRegisterId" Label="PetRegisterId (Guid)" Name="PetRegisterId" Category="Property Primary" Type="Guid" MaxLength="None" Field="nofield" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="True" IsForeignKey="True" IsRequired="True" IsIndexed="False" IsShadow="True" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "State.Value" Label="Value (string)" Name="Value" Category="Property Required" Type="string" MaxLength="(2)" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 2
+Relational:ColumnName: State" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "PetRG" Label="PetRG" Name="PetRG" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="" Category="EntityType" Group="Expanded" />
+<Node Id = "PetRG.PetRegisterId" Label="PetRegisterId (Guid)" Name="PetRegisterId" Category="Property Primary" Type="Guid" MaxLength="None" Field="nofield" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="True" IsForeignKey="True" IsRequired="True" IsIndexed="False" IsShadow="True" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "PetRG.Value" Label="Value (string)" Name="Value" Category="Property Required" Type="string" MaxLength="(20)" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 20
+Relational:ColumnName: PetRG" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+  </Nodes>
+  <Links>
+<Link Source = "IModel" Target="AppointmentClinic" Category="Contains" />
+<Link Source = "IModel" Target="VetClinic" Category="Contains" />
+<Link Source = "AppointmentClinic" Target="AppointmentClinic.Vet" Category="Contains" />
+<Link Source = "AppointmentClinic" Target="AppointmentClinic.Id" Category="Contains" />
+<Link Source="AppointmentClinic" Target="VetClinic" From="AppointmentClinic.VetId" To="VetClinic.Id" Name="AppointmentClinic -> VetClinic" Annotations="" IsUnique="False" Label="1:*" Category="Foreign Key" />
+<Link Source = "AppointmentClinic" Target="AppointmentClinic.CreatedAt" Category="Contains" />
+<Link Source = "AppointmentClinic" Target="AppointmentClinic.DateAppointment" Category="Contains" />
+<Link Source = "AppointmentClinic" Target="AppointmentClinic.Notes" Category="Contains" />
+<Link Source = "AppointmentClinic" Target="AppointmentClinic.PetId" Category="Contains" />
+<Link Source = "AppointmentClinic" Target="AppointmentClinic.RemovedAt" Category="Contains" />
+<Link Source = "AppointmentClinic" Target="AppointmentClinic.VetId" Category="Contains" />
+<Link Source = "IModel" Target="VetClinic.CPF#CPF" Category="Contains" />
+<Link Source = "VetClinic" Target="VetClinic.Appointments" Category="Contains" />
+<Link Source = "VetClinic" Target="VetClinic.CPF" Category="Contains" />
+<Link Source = "VetClinic" Target="VetClinic.CRMV" Category="Contains" />
+<Link Source = "VetClinic" Target="VetClinic.Email" Category="Contains" />
+<Link Source = "VetClinic" Target="VetClinic.PhoneNumber" Category="Contains" />
+<Link Source = "VetClinic" Target="VetClinic.Id" Category="Contains" />
+<Link Source = "VetClinic" Target="VetClinic.CreatedAt" Category="Contains" />
+<Link Source = "VetClinic" Target="VetClinic.FirstName" Category="Contains" />
+<Link Source = "VetClinic" Target="VetClinic.LastName" Category="Contains" />
+<Link Source = "VetClinic" Target="VetClinic.RemovedAt" Category="Contains" />
+<Link Source = "IModel" Target="VetClinic.Email#Email" Category="Contains" />
+<Link Source = "VetClinic.CPF#CPF" Target="VetClinic.CPF#CPF.VetClinicId" Category="Contains" />
+<Link Source="VetClinic.CPF#CPF" Target="VetClinic" From="VetClinic.CPF#CPF.VetClinicId" To="VetClinic.Id" Name="VetClinic.CPF#CPF -> VetClinic" Annotations="" IsUnique="True" Label="1:1" Category="Foreign Key" />
+<Link Source = "VetClinic.CPF#CPF" Target="VetClinic.CPF#CPF.Value" Category="Contains" />
+<Link Source = "IModel" Target="VetClinic.PhoneNumber#PhoneNumber" Category="Contains" />
+<Link Source = "VetClinic.Email#Email" Target="VetClinic.Email#Email.VetClinicId" Category="Contains" />
+<Link Source="VetClinic.Email#Email" Target="VetClinic" From="VetClinic.Email#Email.VetClinicId" To="VetClinic.Id" Name="VetClinic.Email#Email -> VetClinic" Annotations="" IsUnique="True" Label="1:1" Category="Foreign Key" />
+<Link Source = "VetClinic.Email#Email" Target="VetClinic.Email#Email.Value" Category="Contains" />
+<Link Source = "IModel" Target="CRMV" Category="Contains" />
+<Link Source = "VetClinic.PhoneNumber#PhoneNumber" Target="VetClinic.PhoneNumber#PhoneNumber.VetClinicId" Category="Contains" />
+<Link Source="VetClinic.PhoneNumber#PhoneNumber" Target="VetClinic" From="VetClinic.PhoneNumber#PhoneNumber.VetClinicId" To="VetClinic.Id" Name="VetClinic.PhoneNumber#PhoneNumber -> VetClinic" Annotations="" IsUnique="True" Label="1:1" Category="Foreign Key" />
+<Link Source = "VetClinic.PhoneNumber#PhoneNumber" Target="VetClinic.PhoneNumber#PhoneNumber.Value" Category="Contains" />
+<Link Source = "IModel" Target="Appointment" Category="Contains" />
+<Link Source = "CRMV" Target="CRMV.VetClinicId" Category="Contains" />
+<Link Source="CRMV" Target="VetClinic" From="CRMV.VetClinicId" To="VetClinic.Id" Name="CRMV -> VetClinic" Annotations="" IsUnique="True" Label="1:1" Category="Foreign Key" />
+<Link Source = "CRMV" Target="CRMV.Value" Category="Contains" />
+<Link Source = "IModel" Target="AppointmentRegister" Category="Contains" />
+<Link Source = "Appointment" Target="Appointment.Id" Category="Contains" />
+<Link Source = "Appointment" Target="Appointment.CreatedAt" Category="Contains" />
+<Link Source = "Appointment" Target="Appointment.DateAppointment" Category="Contains" />
+<Link Source = "Appointment" Target="Appointment.Notes" Category="Contains" />
+<Link Source = "Appointment" Target="Appointment.PetId" Category="Contains" />
+<Link Source = "Appointment" Target="Appointment.RemovedAt" Category="Contains" />
+<Link Source = "Appointment" Target="Appointment.VetId" Category="Contains" />
+<Link Source = "IModel" Target="OwnerRegister" Category="Contains" />
+<Link Source = "AppointmentRegister" Target="AppointmentRegister.Id" Category="Contains" />
+<Link Source = "AppointmentRegister" Target="AppointmentRegister.CreatedAt" Category="Contains" />
+<Link Source = "AppointmentRegister" Target="AppointmentRegister.DateAppointment" Category="Contains" />
+<Link Source = "AppointmentRegister" Target="AppointmentRegister.PetId" Category="Contains" />
+<Link Source = "AppointmentRegister" Target="AppointmentRegister.RemovedAt" Category="Contains" />
+<Link Source = "AppointmentRegister" Target="AppointmentRegister.VetId" Category="Contains" />
+<Link Source = "IModel" Target="OwnerRegister.CPF#CPF" Category="Contains" />
+<Link Source = "OwnerRegister" Target="OwnerRegister.CPF" Category="Contains" />
+<Link Source = "OwnerRegister" Target="OwnerRegister.Email" Category="Contains" />
+<Link Source = "OwnerRegister" Target="OwnerRegister.Pets" Category="Contains" />
+<Link Source = "OwnerRegister" Target="OwnerRegister.PhoneNumber" Category="Contains" />
+<Link Source = "OwnerRegister" Target="OwnerRegister.Id" Category="Contains" />
+<Link Source = "OwnerRegister" Target="OwnerRegister.CreatedAt" Category="Contains" />
+<Link Source = "OwnerRegister" Target="OwnerRegister.FirstName" Category="Contains" />
+<Link Source = "OwnerRegister" Target="OwnerRegister.LastName" Category="Contains" />
+<Link Source = "OwnerRegister" Target="OwnerRegister.RemovedAt" Category="Contains" />
+<Link Source = "IModel" Target="OwnerRegister.Email#Email" Category="Contains" />
+<Link Source = "OwnerRegister.CPF#CPF" Target="OwnerRegister.CPF#CPF.OwnerRegisterId" Category="Contains" />
+<Link Source="OwnerRegister.CPF#CPF" Target="OwnerRegister" From="OwnerRegister.CPF#CPF.OwnerRegisterId" To="OwnerRegister.Id" Name="OwnerRegister.CPF#CPF -> OwnerRegister" Annotations="" IsUnique="True" Label="1:1" Category="Foreign Key" />
+<Link Source = "OwnerRegister.CPF#CPF" Target="OwnerRegister.CPF#CPF.Value" Category="Contains" />
+<Link Source = "IModel" Target="OwnerRegister.PhoneNumber#PhoneNumber" Category="Contains" />
+<Link Source = "OwnerRegister.Email#Email" Target="OwnerRegister.Email#Email.OwnerRegisterId" Category="Contains" />
+<Link Source="OwnerRegister.Email#Email" Target="OwnerRegister" From="OwnerRegister.Email#Email.OwnerRegisterId" To="OwnerRegister.Id" Name="OwnerRegister.Email#Email -> OwnerRegister" Annotations="" IsUnique="True" Label="1:1" Category="Foreign Key" />
+<Link Source = "OwnerRegister.Email#Email" Target="OwnerRegister.Email#Email.Value" Category="Contains" />
+<Link Source = "IModel" Target="PetRegister" Category="Contains" />
+<Link Source = "OwnerRegister.PhoneNumber#PhoneNumber" Target="OwnerRegister.PhoneNumber#PhoneNumber.OwnerRegisterId" Category="Contains" />
+<Link Source="OwnerRegister.PhoneNumber#PhoneNumber" Target="OwnerRegister" From="OwnerRegister.PhoneNumber#PhoneNumber.OwnerRegisterId" To="OwnerRegister.Id" Name="OwnerRegister.PhoneNumber#PhoneNumber -> OwnerRegister" Annotations="" IsUnique="True" Label="1:1" Category="Foreign Key" />
+<Link Source = "OwnerRegister.PhoneNumber#PhoneNumber" Target="OwnerRegister.PhoneNumber#PhoneNumber.Value" Category="Contains" />
+<Link Source = "IModel" Target="City" Category="Contains" />
+<Link Source = "PetRegister" Target="PetRegister.City" Category="Contains" />
+<Link Source = "PetRegister" Target="PetRegister.Color" Category="Contains" />
+<Link Source = "PetRegister" Target="PetRegister.Owner" Category="Contains" />
+<Link Source = "PetRegister" Target="PetRegister.PetRG" Category="Contains" />
+<Link Source = "PetRegister" Target="PetRegister.Sex" Category="Contains" />
+<Link Source = "PetRegister" Target="PetRegister.Specie" Category="Contains" />
+<Link Source = "PetRegister" Target="PetRegister.State" Category="Contains" />
+<Link Source = "PetRegister" Target="PetRegister.Id" Category="Contains" />
+<Link Source="PetRegister" Target="OwnerRegister" From="PetRegister.OwnerId" To="OwnerRegister.Id" Name="PetRegister -> OwnerRegister" Annotations="" IsUnique="False" Label="1:*" Category="Foreign Key" />
+<Link Source = "PetRegister" Target="PetRegister.BirthDate" Category="Contains" />
+<Link Source = "PetRegister" Target="PetRegister.Castrated" Category="Contains" />
+<Link Source = "PetRegister" Target="PetRegister.Community" Category="Contains" />
+<Link Source = "PetRegister" Target="PetRegister.CreatedAt" Category="Contains" />
+<Link Source = "PetRegister" Target="PetRegister.Microchipped" Category="Contains" />
+<Link Source = "PetRegister" Target="PetRegister.MicrochippedNumber" Category="Contains" />
+<Link Source = "PetRegister" Target="PetRegister.Name" Category="Contains" />
+<Link Source = "PetRegister" Target="PetRegister.OwnerId" Category="Contains" />
+<Link Source = "PetRegister" Target="PetRegister.PhotoURL" Category="Contains" />
+<Link Source = "PetRegister" Target="PetRegister.RemovedAt" Category="Contains" />
+<Link Source = "IModel" Target="Color" Category="Contains" />
+<Link Source = "City" Target="City.PetRegisterId" Category="Contains" />
+<Link Source="City" Target="PetRegister" From="City.PetRegisterId" To="PetRegister.Id" Name="City -> PetRegister" Annotations="" IsUnique="True" Label="1:1" Category="Foreign Key" />
+<Link Source = "City" Target="City.Value" Category="Contains" />
+<Link Source = "IModel" Target="Sex" Category="Contains" />
+<Link Source = "Color" Target="Color.PetRegisterId" Category="Contains" />
+<Link Source="Color" Target="PetRegister" From="Color.PetRegisterId" To="PetRegister.Id" Name="Color -> PetRegister" Annotations="" IsUnique="True" Label="1:1" Category="Foreign Key" />
+<Link Source = "Color" Target="Color.Value" Category="Contains" />
+<Link Source = "IModel" Target="Specie" Category="Contains" />
+<Link Source = "Sex" Target="Sex.PetRegisterId" Category="Contains" />
+<Link Source="Sex" Target="PetRegister" From="Sex.PetRegisterId" To="PetRegister.Id" Name="Sex -> PetRegister" Annotations="" IsUnique="True" Label="1:1" Category="Foreign Key" />
+<Link Source = "Sex" Target="Sex.Value" Category="Contains" />
+<Link Source = "IModel" Target="State" Category="Contains" />
+<Link Source = "Specie" Target="Specie.PetRegisterId" Category="Contains" />
+<Link Source="Specie" Target="PetRegister" From="Specie.PetRegisterId" To="PetRegister.Id" Name="Specie -> PetRegister" Annotations="" IsUnique="True" Label="1:1" Category="Foreign Key" />
+<Link Source = "Specie" Target="Specie.Value" Category="Contains" />
+<Link Source = "IModel" Target="PetRG" Category="Contains" />
+<Link Source = "State" Target="State.PetRegisterId" Category="Contains" />
+<Link Source="State" Target="PetRegister" From="State.PetRegisterId" To="PetRegister.Id" Name="State -> PetRegister" Annotations="" IsUnique="True" Label="1:1" Category="Foreign Key" />
+<Link Source = "State" Target="State.Value" Category="Contains" />
+<Link Source = "IModel" Target="PetRG" Category="Contains" />
+<Link Source = "PetRG" Target="PetRG.PetRegisterId" Category="Contains" />
+<Link Source="PetRG" Target="PetRegister" From="PetRG.PetRegisterId" To="PetRegister.Id" Name="PetRG -> PetRegister" Annotations="" IsUnique="True" Label="1:1" Category="Foreign Key" />
+<Link Source = "PetRG" Target="PetRG.Value" Category="Contains" />
+  </Links>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="EntityType" ValueLabel="True">
+      <Condition Expression="HasCategory('EntityType')" />
+      <Setter Property="Background" Value="#FFC0C0C0" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Primary" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Primary')" />
+      <Setter Property="Background" Value="#FF008000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Optional" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Optional')" />
+      <Setter Property="Background" Value="#FF808040" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Foreign" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Foreign')" />
+      <Setter Property="Background" Value="#FF8080FF" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Required" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Required')" />
+      <Setter Property="Background" Value="#FFC0A000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Navigation Property" ValueLabel="True">
+      <Condition Expression="HasCategory('Navigation Property')" />
+      <Setter Property="Background" Value="#FF990000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Navigation Collection" ValueLabel="True">
+      <Condition Expression="HasCategory('Navigation Collection')" />
+      <Setter Property="Background" Value="#FFFF3232" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Model" ValueLabel="True">
+      <Condition Expression="HasCategory('Model')" />
+      <Setter Property="Background" Value="#FFFFFFFF" />
+    </Style>
+  </Styles>
+  <Properties>
+    <Property Id="Name" Group="Model Properties" DataType="System.String" />
+    <Property Id="Field"  Description="Backing field" Group="Model Properties" DataType="System.String" />
+    <Property Id="Type"  Description="CLR data type" Group="Model Properties" DataType="System.String" />
+    <Property Id="To" Description="Source property" Group="Model Properties" DataType="System.String" />
+    <Property Id="From" Description="Target property" Group="Model Properties" DataType="System.String" />
+    <Property Id="Dependent" Description="Dependent entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="Inverse" Description="Inverse entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="Principal" Description="Principal entity" Group="Model Properties" DataType="System.String" />    
+    <Property Id="Annotations" Description="Annotations" Group="Model Properties" DataType="System.String" />
+    <Property Id="BaseClass"  Description="Base class" Group="Model Properties" DataType="System.String" />
+    <Property Id="ChangeTrackingStrategy" Description="Change tracking strategy" Group="Model Properties" DataType="System.String" />
+    <Property Id="IsUnique" Group="Model Properties" DataType="System.Boolean" />
+    <Property Id="IsAbstract" Group="Model Properties" DataType="System.Boolean" />
+    <Property Id="ProductVersion" Label="Product Version" Description="EF Core product version" Group="Model Properties" DataType="System.String" />
+    <Property Id="IsIndexed" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsRequired" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsPrimaryKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsForeignKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsShadow" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsAlternateKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsConcurrencyToken" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsIndexed" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsUnicode" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="ValueGenerated" Group="Property Flags" DataType="System.String" />
+    <Property Id="BeforeSaveBehavior" Group="Property Flags" DataType="System.String" />
+    <Property Id="AfterSaveBehavior" Group="Property Flags" DataType="System.String" />
+    <Property Id="PropertyAccessMode" Group="Property Flags" DataType="System.String" />
+  </Properties>
+</DirectedGraph>
